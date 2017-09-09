@@ -231,11 +231,6 @@ class UserProfileFragment : BaseFragment(),
     }
 
     private fun inputNewName(currentName: String?) {
-        if (true) {
-            // CURRENTLY WE DON'T SUPPORT USERS TO CHANGE NAME AFTER IDENTITY VERIFICATION
-            return
-        }
-
         val textInputDialog = TextInputDialog()
         textInputDialog.showDialog(
                 activity,

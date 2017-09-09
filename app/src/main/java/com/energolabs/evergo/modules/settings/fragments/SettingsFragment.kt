@@ -23,6 +23,9 @@ class SettingsFragment : BaseListFragment<
         SettingsGroupViewModel,
         SettingsGroup>() {
 
+    override val layoutId: Int
+        get() = R.layout.fragment_settings
+
     override fun onResume() {
         super.onResume()
         setTitle(R.string.energo_settings_title)
@@ -48,10 +51,6 @@ class SettingsFragment : BaseListFragment<
 
         settingsGroups.add(
                 makeSecuritySettingsGroup()
-        )
-
-        settingsGroups.add(
-                makeUpdateGroup()
         )
 
         settingsGroups.add(
@@ -81,11 +80,6 @@ class SettingsFragment : BaseListFragment<
         )
         profileItem.userModel = userProfilePreferences.userModel
         items.add(profileItem)
-
-        val contactItem = SettingsItem()
-        contactItem.name = getStringSafely(R.string.energo_settings_contact)
-        contactItem._id = "contact"
-        items.add(contactItem)
 
         return settingsGroup
     }
@@ -128,11 +122,6 @@ class SettingsFragment : BaseListFragment<
         paymentPasswordItem._id = "paymentPassword"
         items.add(paymentPasswordItem)
 
-        val phoneItem = SettingsItem()
-        phoneItem.name = getStringSafely(R.string.energo_settings_phone)
-        phoneItem._id = "phone"
-        items.add(phoneItem)
-
         val helpItem = SettingsItem()
         helpItem.name = getStringSafely(R.string.energo_settings_help)
         helpItem._id = "help"
@@ -142,19 +131,6 @@ class SettingsFragment : BaseListFragment<
         legalItem.name = getStringSafely(R.string.energo_settings_legal)
         legalItem._id = "legal"
         items.add(legalItem)
-
-        return settingsGroup
-    }
-
-    private fun makeUpdateGroup(): SettingsGroup {
-        val settingsGroup = SettingsGroup()
-        val items = ArrayList<SettingsItem>()
-        settingsGroup.items = items
-
-        val updateItem = SettingsItem()
-        updateItem.name = getStringSafely(R.string.energo_settings_update)
-        updateItem._id = "update"
-        items.add(updateItem)
 
         return settingsGroup
     }

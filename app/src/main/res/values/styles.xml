@@ -118,7 +118,7 @@
     <style name="energo_settings_item_style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/energo_menu_item_height</item>
-        <item name="android:background">@android:color/white</item>
+        <item name="android:background">#293245</item>
         <item name="android:paddingEnd">@dimen/energo_large_spacing</item>
         <item name="android:paddingStart">@dimen/energo_large_spacing</item>
     </style>
