@@ -7,10 +7,10 @@ android {
     }
     signingConfigs {
         release {
-            keyAlias 'Hackathon - Android App'
-            keyPassword 'Energo654321'
+            keyAlias 'Evergo - Android App'
+            keyPassword 'Evergo'
             storeFile file('keystore/release_key.jks')
-            storePassword 'Energo654321'
+            storePassword 'Evergo'
         }
     }
     compileSdkVersion 25
@@ -58,6 +58,9 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile project(':imagespickers')
+    compile 'com.google.android.gms:play-services-maps:11.2.2'
+    compile 'com.google.android.gms:play-services-location:11.2.2'
+    compile 'com.google.android.gms:play-services-places:11.2.2'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'

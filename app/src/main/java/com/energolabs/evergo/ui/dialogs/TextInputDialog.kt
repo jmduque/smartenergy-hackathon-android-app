@@ -29,7 +29,8 @@ class TextInputDialog {
             @StringRes title: Int,
             currentValue: String,
             @StringRes hint: Int,
-            positiveButtonListener: DialogInterface.OnClickListener
+            positiveButtonListener: DialogInterface.OnClickListener,
+            inputType: Int = InputType.TYPE_TEXT_VARIATION_PERSON_NAME
     ) {
         activity ?: return
         val builder = AlertDialog.Builder(activity)
@@ -47,7 +48,7 @@ class TextInputDialog {
         input = viewInflated.findViewById(R.id.input) as EditText
         input?.setText(currentValue)
         input?.setHint(hint)
-        input?.inputType = InputType.TYPE_TEXT_VARIATION_PERSON_NAME
+        input?.inputType = inputType
         // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
         builder.setView(viewInflated)
 

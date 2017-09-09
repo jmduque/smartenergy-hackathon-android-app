@@ -17,8 +17,8 @@ import com.dinuscxj.progressbar.CircleProgressBar
 import com.energolabs.evergo.R
 import com.energolabs.evergo.controllers.ActivityPermissionsController
 import com.energolabs.evergo.modules.auth.storage.AuthPreferences
+import com.energolabs.evergo.modules.battery.fragments.BatteryListFragment
 import com.energolabs.evergo.modules.currencyWallet.fragments.WalletFragment
-import com.energolabs.evergo.modules.devices.fragments.DeviceTypesFragment
 import com.energolabs.evergo.modules.energyWallet.controllers.EnergyController
 import com.energolabs.evergo.modules.energyWallet.models.EnergyWalletModel
 import com.energolabs.evergo.modules.energyWallet.requests.PostEnergyBalanceRequest
@@ -455,8 +455,8 @@ class MainActivity : BaseActivity(),
             R.id.tv_devices -> {
                 DetailActivityNoCollapsing.openWithFragment(
                         this,
-                        DeviceTypesFragment::class.java.name,
-                        DeviceTypesFragment.makeArguments(),
+                        BatteryListFragment::class.java.name,
+                        BatteryListFragment.makeArguments(),
                         true
                 )
             }

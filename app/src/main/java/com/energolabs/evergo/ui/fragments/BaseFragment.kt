@@ -3,8 +3,6 @@ package com.energolabs.evergo.ui.fragments
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.DialogInterface
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.support.annotation.CallSuper
 import android.support.annotation.LayoutRes
@@ -58,10 +56,9 @@ abstract class BaseFragment : Fragment() {
     }
 
     private fun initAndShowWaitDialog() {
-        val waitDialog = ProgressDialog(context)
-        waitDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        waitDialog.setCancelable(false)
-        waitDialog.show()
+        waitDialog = ProgressDialog(context)
+        waitDialog?.setCancelable(false)
+        waitDialog?.show()
     }
 
     protected fun showWaitDialog() {

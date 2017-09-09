@@ -29,8 +29,4 @@ class LedgerTransactionViewHolder(
         )
     }
 
-    override fun updateDescription() {
-        tv_description?.visibility = View.GONE
-    }
-
 }

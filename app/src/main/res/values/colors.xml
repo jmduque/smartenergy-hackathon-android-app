@@ -8,6 +8,8 @@
 
     <color name="energo_yellow_error">#fff24e</color>
 
+    <color name="energo_actionbar_background">#2F3A4F</color>
+
     <!-- Text Colors -->
     <color name="energo_text_color_primary">#333333</color>
     <color name="energo_text_color_secondary">#666666</color>

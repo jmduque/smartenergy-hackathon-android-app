@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#293245"
+    android:divider="@drawable/gray_horizontal_divider"
+    android:dividerPadding="@dimen/energo_medium_spacing"
+    android:orientation="vertical"
+    android:showDividers="middle|end">
+
+    <LinearLayout style="@style/energo_add_battery_item_frame">
+
+        <ImageView
+            style="@style/energo_add_battery_item_image_tag"
+            android:src="@drawable/ic_name_tag" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:labelFor="@+id/et_name"
+            android:text="@string/energo_add_battery_name_tag"
+            android:textColor="?android:textColorTertiaryInverse"
+            android:textSize="@dimen/energo_text_medium" />
+
+        <TextView
+            android:id="@+id/et_name"
+            style="@style/energo_add_battery_item_value"
+            android:hint="@string/energo_battery_list_undefined_name"
+            tools:text="Jose" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/energo_add_battery_item_frame">
+
+        <ImageView
+            style="@style/energo_add_battery_item_image_tag"
+            android:layout_weight="0"
+            android:src="@drawable/ic_capacity_tag" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0"
+            android:labelFor="@+id/et_capacity"
+            android:text="@string/energo_add_battery_capacity_tag"
+            android:textColor="?android:textColorTertiaryInverse"
+            android:textSize="@dimen/energo_text_medium" />
+
+        <TextView
+            android:id="@+id/et_capacity"
+            style="@style/energo_add_battery_item_value"
+            android:layout_weight="1"
+            android:hint="@string/energo_battery_list_undefined_name"
+            tools:text="121.12" />
+
+        <TextView
+            style="@style/energo_add_battery_item_value_unit"
+            android:layout_weight="0"
+            android:hint="@string/energo_battery_list_undefined_name"
+            android:text="@string/energo_battery_energy_unit" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/energo_add_battery_item_frame">
+
+        <ImageView
+            style="@style/energo_add_battery_item_image_tag"
+            android:layout_weight="0"
+            android:src="@drawable/ic_charge_tag" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0"
+            android:labelFor="@+id/et_charge"
+            android:text="@string/energo_battery_charge_tag"
+            android:textColor="?android:textColorTertiaryInverse"
+            android:textSize="@dimen/energo_text_medium" />
+
+        <TextView
+            android:id="@+id/et_charge"
+            style="@style/energo_add_battery_item_value"
+            android:layout_weight="1"
+            android:hint="@string/energo_battery_list_undefined_name"
+            tools:text="121.12" />
+
+        <TextView
+            style="@style/energo_add_battery_item_value_unit"
+            android:layout_weight="0"
+            android:hint="@string/energo_battery_list_undefined_name"
+            android:text="@string/energo_battery_energy_unit" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/energo_add_battery_item_frame">
+
+        <ImageView
+            style="@style/energo_add_battery_item_image_tag"
+            android:src="@drawable/ic_type_tag" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:labelFor="@+id/et_type"
+            android:text="@string/energo_add_battery_type_tag"
+            android:textColor="?android:textColorTertiaryInverse"
+            android:textSize="@dimen/energo_text_medium" />
+
+        <TextView
+            android:id="@+id/et_type"
+            style="@style/energo_add_battery_item_value"
+            android:hint="@string/energo_battery_list_undefined_name"
+            android:textAllCaps="true"
+            tools:text="EV" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/energo_add_battery_item_frame">
+
+        <ImageView
+            style="@style/energo_add_battery_item_image_tag"
+            android:src="@drawable/ic_staus_tag" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:labelFor="@+id/et_status"
+            android:text="@string/energo_battery_status_tag"
+            android:textColor="?android:textColorTertiaryInverse"
+            android:textSize="@dimen/energo_text_medium" />
+
+        <TextView
+            android:id="@+id/et_status"
+            style="@style/energo_add_battery_item_value"
+            android:capitalize="sentences"
+            android:hint="@string/energo_battery_list_undefined_name"
+            tools:text="Online" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/energo_add_battery_item_frame">
+
+        <ImageView
+            style="@style/energo_add_battery_item_image_tag"
+            android:src="@drawable/ic_location_tag" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:labelFor="@+id/et_location"
+            android:text="@string/energo_add_battery_location_tag"
+            android:textColor="?android:textColorTertiaryInverse"
+            android:textSize="@dimen/energo_text_medium" />
+
+        <TextView
+            android:id="@+id/et_location"
+            style="@style/energo_add_battery_item_value"
+            android:hint="@string/energo_battery_list_undefined_name"
+            android:textSize="@dimen/energo_text_small"
+            tools:text="Twin Towers Hotel\n124.123, 133.321" />
+
+    </LinearLayout>
+
+</LinearLayout>

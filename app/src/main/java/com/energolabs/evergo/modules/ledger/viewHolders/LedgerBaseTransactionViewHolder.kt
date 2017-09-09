@@ -34,14 +34,12 @@ abstract class LedgerBaseTransactionViewHolder<VM : TransactionModel>(
     private var tv_date: TextView? = null
     protected var iv_icon: ImageView? = null
     private var tv_value: TextView? = null
-    protected var tv_description: TextView? = null
 
     override fun findViews(view: View) {
         super.findViews(view)
         tv_date = view.findViewById(R.id.tv_date) as TextView?
         iv_icon = view.findViewById(R.id.iv_icon) as ImageView?
         tv_value = view.findViewById(R.id.tv_value) as TextView?
-        tv_description = view.findViewById(R.id.tv_description) as TextView?
     }
 
     override fun setListeners() {
@@ -60,7 +58,6 @@ abstract class LedgerBaseTransactionViewHolder<VM : TransactionModel>(
                 getCurrencyAmount(),
                 item?.currencySymbol
         )
-        updateDescription()
     }
 
     open fun getCurrencyAmount(): Long {
@@ -85,8 +82,6 @@ abstract class LedgerBaseTransactionViewHolder<VM : TransactionModel>(
                 currencySymbol
         )
     }
-
-    protected abstract fun updateDescription()
 
     companion object {
 

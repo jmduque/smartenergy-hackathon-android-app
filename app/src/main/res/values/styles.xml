@@ -10,11 +10,12 @@
     </style>
 
     <style name="MainActionBar" parent="@style/ThemeOverlay.AppCompat.ActionBar">
-        <item name="android:background">@android:color/white</item>
+        <item name="android:theme">@style/Theme.AppCompat.NoActionBar</item>
+        <item name="android:background">@color/energo_actionbar_background</item>
         <item name="android:windowActionBarOverlay">true</item>
 
         <!-- Support library compatibility -->
-        <item name="background">@android:color/white</item>
+        <item name="background">@color/energo_actionbar_background</item>
         <item name="windowActionBarOverlay">true</item>
     </style>
 
@@ -730,49 +731,11 @@
         <item name="android:drawablePadding">@dimen/energo_small_spacing</item>
     </style>
 
-    <style name="energo_market_agent_auto_value">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_toEndOf">@id/tv_decrease_value</item>
-        <item name="android:layout_toStartOf">@id/tv_increase_value</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textSize">@dimen/energo_text_double_small</item>
-    </style>
-
-    <style name="energo_market_agent_auto_main_layout">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">@dimen/energo_medium_spacing</item>
-        <item name="android:background">@android:color/white</item>
-        <item name="android:divider">@drawable/gray_horizontal_divider</item>
-        <item name="android:orientation">vertical</item>
-        <item name="android:showDividers">middle</item>
-    </style>
-
     <style name="energo_market_agent_auto_action_icon">
         <item name="android:layout_width">24dp</item>
         <item name="android:layout_height">24dp</item>
         <item name="android:layout_centerVertical">true</item>
         <item name="android:scaleType">centerInside</item>
-    </style>
-
-    <style name="energo_market_agent_action_label">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_marginEnd">@dimen/energo_small_spacing</item>
-        <item name="android:layout_marginStart">@dimen/energo_small_spacing</item>
-        <item name="android:layout_toEndOf">@id/iv_action_icon</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:textColor">@color/energo_text_color_primary</item>
-    </style>
-
-    <style name="energo_market_agent_auto_label_info">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_toEndOf">@id/tv_label</item>
-        <item name="android:layout_toStartOf">@id/switchView</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:textColor">@color/energo_text_color_tertiary</item>
     </style>
 
     <style name="energo_market_agent_auto_switch">
@@ -804,6 +767,45 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/energo_text_large</item>
+    </style>
+
+    <style name="energo_add_battery_item_frame">
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:paddingBottom">@dimen/energo_medium_spacing</item>
+        <item name="android:paddingEnd">@dimen/energo_very_large_spacing</item>
+        <item name="android:paddingStart">@dimen/energo_very_large_spacing</item>
+        <item name="android:paddingTop">@dimen/energo_medium_spacing</item>
+    </style>
+
+    <style name="energo_add_battery_item_image_tag">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginEnd">@dimen/energo_small_spacing</item>
+    </style>
+
+    <style name="energo_add_battery_item_value">
+        <item name="android:minHeight">38dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginStart">@dimen/energo_double_large_spacing</item>
+        <item name="android:gravity">end|center_vertical</item>
+        <item name="android:textColor">?android:textColorPrimaryInverse</item>
+        <item name="android:textSize">@dimen/energo_text_large</item>
+        <item name="android:textColorHint">?android:textColorTertiaryInverse</item>
+    </style>
+
+    <style name="energo_add_battery_item_value_unit">
+        <item name="android:layout_width">38dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">end|center_vertical</item>
+        <item name="android:textColor">?android:textColorPrimaryInverse</item>
+        <item name="android:textSize">@dimen/energo_text_small</item>
+        <item name="android:textColorHint">?android:textColorTertiaryInverse</item>
     </style>
 
 </resources>

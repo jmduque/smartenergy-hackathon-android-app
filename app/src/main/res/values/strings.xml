@@ -378,4 +378,30 @@
     <string name="energo_update_action_update">Update</string>
     <string name="energo_update_action_no_update">Return</string>
 
+    <!-- Battery -->
+    <string name="energo_battery_list_title">Storage</string>
+    <string name="energo_battery_energy_unit">KWh</string>
+    <string name="energo_battery_list_add_first_hint">Click on the \"+\" to bind a battery with your account</string>
+    <string name="energo_battery_list_undefined_name">Undefined</string>
+
+    <!-- Add Battery -->
+    <string name="energo_add_battery_title">Add Storage</string>
+    <string name="energo_add_battery_name_tag">Name</string>
+    <string name="energo_add_battery_capacity_tag">Capacity</string>
+    <string name="energo_add_battery_type_tag">Type</string>
+    <string name="energo_add_battery_location_tag">Location</string>
+    <string name="energo_add_battery_type_ev">ev</string>
+    <string name="energo_add_battery_type_pw">pw</string>
+    <string name="energo_add_battery_success">Battery added</string>
+    <string name="energo_add_battery_error">Unable to add battery</string>
+
+    <!-- Battery Detail -->
+    <string name="energo_battery_title">Storage Detail</string>
+    <string name="energo_battery_name_tag">Name</string>
+    <string name="energo_battery_capacity_tag">Capacity</string>
+    <string name="energo_battery_type_tag">Type</string>
+    <string name="energo_battery_location_tag">Location</string>
+    <string name="energo_battery_status_tag">Status</string>
+    <string name="energo_battery_charge_tag">Charge</string>
+
 </resources>

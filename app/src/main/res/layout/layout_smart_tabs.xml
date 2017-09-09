@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.energolabs.evergo.ui.views.EnergoSmartTabLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/estl_tabs"
     android:layout_width="match_parent"
     android:layout_height="48dp"
@@ -26,5 +25,4 @@
     app:stl_indicatorWithoutPadding="false"
     app:stl_overlineColor="@color/energo_market_color"
     app:stl_overlineThickness="0dp"
-    app:stl_titleOffset="24dp"
-    tools:showIn="@layout/fragment_market" />
+    app:stl_titleOffset="24dp" />
