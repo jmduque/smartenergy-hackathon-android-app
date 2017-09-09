@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ImagesPickers</string>
+
+    <string name="imagepicker_folder_name">Folder</string>
+    <string name="imagepicker_image_num">Max Photos</string>
+    <string name="imagepicker_all_folder">All Photos</string>
+    <string name="imagepicker_sheet">Items</string>
+    <string name="imagepicker_shoot">Take Photo</string>
+    <string name="imagepicker_picture">Photo</string>
+    <string name="imagepicker_finish">Done</string>
+    <string name="imagepicker_temp_date">2015–12–02</string>
+    <string name="imagepicker_msg_no_camera">No camera</string>
+    <string name="imagepicker_msg_amount_limit">Limit photos selected</string>
+
+    <string name="imagepicker_open_camera_fail">Unable to access camera!</string>
+    <string name="imagepicker_empty_sdcard">Can\'t access external storage</string>
+    <string name="imagepicker_btn_set">Set</string>
+
+    <string name="imagepicker_only_choose_num">Can\'t choose more photos than the limit</string>
+    <string name="imagepicker_invalid_sd_card">Invalid SDCard!</string>
+    <string name="imagepicker_album">Gallery</string>
+    <string name="imagepicker_preview">Preview</string>
+    <string name="imagepicker_camera_cancel">Cancel</string>
+    <string name="imagepicker_no_photo">There is no photos</string>
+</resources>

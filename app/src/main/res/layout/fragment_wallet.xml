@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient"
+        android:divider="@drawable/gray_horizontal_divider"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <RelativeLayout
+            android:id="@+id/rl_balance_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/energo_large_spacing">
+
+            <TextView
+                android:id="@+id/tv_currency_balance_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/energo_large_spacing"
+                android:paddingStart="@dimen/energo_large_spacing"
+                android:paddingTop="@dimen/energo_large_spacing"
+                android:text="@string/energo_wallet_currency_header"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="?android:textColorPrimaryInverse" />
+
+            <TextView
+                android:id="@+id/tv_currency_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_currency_balance_header"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingEnd="@dimen/energo_large_spacing"
+                android:paddingStart="@dimen/energo_large_spacing"
+                android:text="@string/energo_default_currency_balance"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="?android:textColorPrimaryInverse"
+                android:textSize="48sp"
+                tools:text="6378,2" />
+
+            <TextView
+                android:id="@+id/tv_currency_balance_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tv_currency_balance"
+                android:layout_below="@id/tv_currency_balance_header"
+                android:layout_toEndOf="@id/tv_currency_balance"
+                android:text="@string/energo_wallet_currency_symbol"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="?android:textColorPrimaryInverse" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/gray_vertical_divider"
+            android:dividerPadding="@dimen/energo_very_large_spacing"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <FrameLayout
+                android:id="@+id/rl_recharge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?selectableItemBackground"
+                android:paddingBottom="@dimen/energo_large_spacing"
+                android:paddingTop="@dimen/energo_large_spacing">
+
+                <TextView
+                    android:id="@+id/tv_recharge"
+                    style="@style/energo_wallet_action_text"
+                    android:drawableStart="@drawable/ic_wallet_recharge"
+                    android:text="@string/energo_wallet_currency_recharge" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/rl_withdraw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?selectableItemBackground"
+                android:paddingBottom="@dimen/energo_large_spacing"
+                android:paddingTop="@dimen/energo_large_spacing">
+
+                <TextView
+                    android:id="@+id/tv_withdraw"
+                    style="@style/energo_wallet_action_text"
+                    android:drawableStart="@drawable/ic_wallet_withdraw"
+                    android:text="@string/energo_wallet_currency_withdraw" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/swipe_refresh_layout_recyclerview" />
+
+</LinearLayout>

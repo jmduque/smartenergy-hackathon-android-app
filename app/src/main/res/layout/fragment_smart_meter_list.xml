@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/swipe_refresh_layout_recyclerview" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/energo_large_spacing"
+        android:src="@drawable/ic_add_24dp"
+        android:visibility="gone"
+        app:backgroundTint="@android:color/white"
+        app:borderWidth="0dp"
+        app:fabSize="normal" />
+
+    <LinearLayout
+        android:id="@+id/ll_empty_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient"
+        android:orientation="vertical"
+        android:padding="@dimen/energo_very_large_spacing">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/energo_very_large_spacing"
+            android:text="@string/energo_smart_meter_device_list_add_first_hint"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_empty_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/energo_very_large_spacing"
+            android:src="@drawable/ic_add_24dp"
+            app:backgroundTint="@android:color/white"
+            app:borderWidth="0dp"
+            app:fabSize="normal" />
+
+    </LinearLayout>
+
+</FrameLayout>

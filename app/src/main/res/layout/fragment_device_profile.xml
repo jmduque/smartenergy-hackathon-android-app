@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_name"
+        style="@style/energo_profile_item"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_name_label"
+            style="@style/energo_profile_item_label"
+            android:text="@string/energo_smart_meter_profile_name_label" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/energo_profile_item_value"
+            android:text="@string/energo_smart_meter_profile_default_value" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_attach_to"
+        style="@style/energo_profile_item"
+        android:layout_marginTop="@dimen/energo_divider_medium"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_attach_to_label"
+            style="@style/energo_profile_item_label"
+            android:text="@string/energo_smart_meter_profile_attach_to_label" />
+
+        <TextView
+            android:id="@+id/tv_attach_to"
+            style="@style/energo_profile_item_value"
+            android:text="@string/energo_smart_meter_profile_default_value" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_status"
+        style="@style/energo_profile_item"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_status_label"
+            style="@style/energo_profile_item_label"
+            android:text="@string/energo_smart_meter_profile_status_label" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/energo_profile_item_value"
+            android:text="@string/energo_smart_meter_profile_default_value" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_access_time"
+        style="@style/energo_profile_item"
+        android:layout_marginTop="@dimen/energo_divider_medium"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_access_time_label"
+            style="@style/energo_profile_item_label"
+            android:text="@string/energo_smart_meter_profile_access_time_label" />
+
+        <TextView
+            android:id="@+id/tv_access_time"
+            style="@style/energo_profile_item_value"
+            android:text="@string/energo_smart_meter_profile_default_value" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_model"
+        style="@style/energo_profile_item"
+        android:layout_marginTop="@dimen/energo_divider_medium"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_model_label"
+            style="@style/energo_profile_item_label"
+            android:text="@string/energo_smart_meter_profile_model_label" />
+
+        <TextView
+            android:id="@+id/tv_model"
+            style="@style/energo_profile_item_value"
+            android:text="@string/energo_smart_meter_profile_default_value" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_version"
+        style="@style/energo_profile_item"
+        android:layout_marginTop="@dimen/energo_divider_medium"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_version_label"
+            style="@style/energo_profile_item_label"
+            android:text="@string/energo_smart_meter_profile_version_label" />
+
+        <TextView
+            android:id="@+id/tv_version"
+            style="@style/energo_profile_item_value"
+            android:text="@string/energo_smart_meter_profile_default_value" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_uuid"
+        style="@style/energo_profile_item"
+        android:layout_marginTop="@dimen/energo_divider_medium"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_uuid_label"
+            style="@style/energo_profile_item_label"
+            android:text="@string/energo_smart_meter_profile_uuid_label" />
+
+        <TextView
+            android:id="@+id/tv_uuid"
+            style="@style/energo_profile_item_value"
+            android:text="@string/energo_smart_meter_profile_default_value" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout style="@style/energo_market_agent_auto_main_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingEnd="@dimen/energo_medium_spacing"
+            android:paddingStart="@dimen/energo_medium_spacing">
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switchView"
+                style="@style/energo_market_agent_auto_switch" />
+
+            <ImageView
+                android:id="@+id/iv_action_icon"
+                style="@style/energo_market_agent_auto_action_icon"
+                android:background="@drawable/bg_market_order_sell"
+                android:contentDescription="@string/energo_content_description_icon"
+                android:src="@drawable/ic_market_order_history_sell" />
+
+            <TextView
+                android:id="@+id/tv_label"
+                style="@style/energo_market_agent_action_label"
+                android:text="@string/energo_market_agent_auto_sell" />
+
+            <TextView
+                android:id="@+id/tv_label_info"
+                style="@style/energo_market_agent_auto_label_info"
+                android:text="@string/energo_market_agent_set_highest" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <TextView
+                android:id="@+id/tv_decrease_value"
+                style="@style/energo_market_agent_auto_action"
+                android:layout_alignParentStart="true"
+                android:drawableTop="@drawable/ic_remove_gray_24dp"
+                android:text="@string/energo_market_agent_value_step" />
+
+            <TextView
+                android:id="@+id/tv_increase_value"
+                style="@style/energo_market_agent_auto_action"
+                android:layout_alignParentEnd="true"
+                android:drawableTop="@drawable/ic_add_gray_24dp"
+                android:text="@string/energo_market_agent_value_step" />
+
+            <TextView
+                android:id="@+id/tv_value"
+                style="@style/energo_market_agent_auto_value"
+                tools:text="0.58" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_info"
+            style="@style/energo_market_agent_auto_info"
+            android:text="@string/energo_market_agent_auto_sell_info"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

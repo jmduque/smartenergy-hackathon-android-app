@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/energo_very_large_spacing">
+
+        <FrameLayout
+            android:id="@+id/fl_smart_meter"
+            style="@style/energo_device_type_container">
+
+            <ImageView
+                style="@style/energo_device_type_icon"
+                android:contentDescription="@string/energo_content_description_icon"
+                android:src="@drawable/ic_smart_meter" />
+
+            <TextView
+                style="@style/energo_device_type_name"
+                android:text="@string/energo_devices_smart_meter" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_solar_energy"
+            style="@style/energo_device_type_container">
+
+            <ImageView
+                style="@style/energo_device_type_icon"
+                android:contentDescription="@string/energo_content_description_icon"
+                android:src="@drawable/ic_solar_panels" />
+
+            <TextView
+                style="@style/energo_device_type_name"
+                android:text="@string/energo_devices_solar_energy" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

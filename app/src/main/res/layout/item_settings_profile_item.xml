@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/energo_settings_item_style"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:foreground="?android:selectableItemBackground"
+        android:gravity="center_vertical|start"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/energo_text_color_secondary"
+        tools:text="Profile" />
+
+    <TextView
+        android:id="@+id/tv_verification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0"
+        android:background="@drawable/bg_not_verified"
+        android:paddingBottom="@dimen/energo_small_spacing"
+        android:paddingEnd="@dimen/energo_medium_spacing"
+        android:paddingStart="@dimen/energo_medium_spacing"
+        android:paddingTop="@dimen/energo_small_spacing"
+        android:text="@string/energo_settings_profile_not_verified"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+        android:textSize="@dimen/energo_text_tiny" />
+
+</LinearLayout>

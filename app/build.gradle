@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    lintOptions {
+        abortOnError false
+    }
+    signingConfigs {
+        release {
+            keyAlias 'Hackathon - Android App'
+            keyPassword 'Energo654321'
+            storeFile file('keystore/release_key.jks')
+            storePassword 'Energo654321'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.energolabs.evergo"
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    flavorDimensions "type"
+
+    applicationVariants.all { variant ->
+        def appName
+        // Check if an applicationName property is supplied;
+        // if not use the name of the parent project.
+        if (project.hasProperty("applicationName")) {
+            appName = applicationName
+        } else {
+            appName = parent.name
+        }
+
+        variant.outputs.each { output ->
+            def newApkName = "${appName}-${output.baseName}-${variant.versionName}.apk"
+            // This needs to find a new way
+            //output.outputFile.name = new File(output.outputFile.parent, newApkName)
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':imagespickers')
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'eu.davidea:flexible-adapter:5.0.0-b7'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.ogaclejapan.smarttablayout:library:1.5.1@aar'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    //THIS LIBRARY ALSO CONTAINS SUPPORT LIBRARY, NEED TO UPDATE BEFORE UPDATING OURS
+    compile 'com.afollestad.material-dialogs:core:0.9.4.4'
+    compile 'com.afollestad.material-dialogs:commons:0.9.4.4'
+    compile 'com.liaoinstan.springview:library:1.2.6'
+    compile 'me.dm7.barcodescanner:zxing:1.9'
+    compile 'me.philio:pinentryview:1.0.6'
+    compile('io.socket:socket.io-client:0.8.3') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+    testCompile 'junit:junit:4.12'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile 'com.dinuscxj:circleprogressbar:1.1.1'
+}
+repositories {
+    mavenCentral()
+    jcenter()
+}

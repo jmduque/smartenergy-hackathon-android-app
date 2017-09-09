@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_background"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/energo_medium_spacing"
+        android:layout_marginTop="@dimen/energo_medium_spacing"
+        android:contentDescription="@string/energo_content_description_background"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_update" />
+
+    <TextView
+        android:id="@+id/tv_version_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_background"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/energo_double_large_spacing"
+        android:padding="@dimen/energo_large_spacing"
+        android:textColor="@color/energo_update_text_color"
+        android:textSize="@dimen/energo_text_medium"
+        tools:text="V2.1" />
+
+    <FrameLayout
+        android:id="@+id/fl_checking"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/iv_background"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/pb_checking"
+            style="@style/energo_check_updates_progress" />
+
+        <TextView
+            style="@style/energo_check_updates_progress_info"
+            android:text="@string/energo_check_updates_in_progress" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/ll_no_updates"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/iv_background"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/energo_medium_spacing"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="@string/energo_check_updates_no_new_version"
+            android:textColor="@color/energo_update_text_color"
+            android:textSize="@dimen/energo_text_small" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/tv_accept"
+            style="@style/energo_primary_filled_button"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_margin="@dimen/energo_medium_spacing"
+            android:text="@string/energo_update_action_no_update" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/ll_new_version"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/iv_background"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_change_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textColor="@color/energo_update_text_color"
+            android:textSize="@dimen/energo_text_small"
+            tools:text="1.Adjust Optimize Software Performance and Component Module Update\n2.Fix multiple known bugs" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:padding="@dimen/energo_medium_spacing">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/tv_not_yet"
+                style="@style/energo_primary_green_button"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/energo_medium_spacing"
+                android:text="@string/energo_update_action_not_yet" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/tv_update"
+                style="@style/energo_primary_filled_button"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/energo_medium_spacing"
+                android:text="@string/energo_update_action_update" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_downloading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_background"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/pb_updating"
+            style="@style/energo_check_updates_progress"
+            android:indeterminate="false"
+            tools:max="100"
+            tools:progress="10" />
+
+        <TextView
+            android:id="@+id/tv_progress"
+            style="@style/energo_check_updates_progress_info"
+            android:textSize="@dimen/energo_text_double_large"
+            tools:text="30%" />
+
+    </FrameLayout>
+
+</RelativeLayout>

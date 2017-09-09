@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFF4"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_payment_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/transparent_medium_vertical_divider"
+        android:padding="@dimen/energo_large_spacing"
+        android:showDividers="middle">
+
+        <ImageView
+            android:id="@+id/iv_alipay"
+            style="@style/energo_wallet_payment_type"
+            android:contentDescription="@string/energo_content_description_icon"
+            android:src="@drawable/ic_alipay" />
+
+        <ImageView
+            android:id="@+id/iv_paypal"
+            style="@style/energo_wallet_payment_type"
+            android:contentDescription="@string/energo_content_description_icon"
+            android:src="@drawable/ic_paypal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_payment_type"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/energo_large_spacing"
+        android:paddingTop="@dimen/energo_large_spacing">
+
+        <TextView
+            android:id="@+id/tv_currency_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/energo_large_spacing"
+            android:paddingStart="@dimen/energo_large_spacing"
+            android:textColor="?android:textColorPrimary"
+            tools:text="PHP" />
+
+        <EditText
+            android:id="@+id/et_currency_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center_vertical|end"
+            android:hint="@string/energo_wallet_recharge_amount_hint"
+            android:inputType="numberDecimal"
+            android:paddingEnd="@dimen/energo_large_spacing"
+            android:paddingStart="@dimen/energo_large_spacing" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_recharge"
+        style="@style/energo_primary_filled_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_amount"
+        android:layout_margin="@dimen/energo_double_large_spacing"
+        android:text="@string/energo_wallet_recharge_action" />
+
+</RelativeLayout>

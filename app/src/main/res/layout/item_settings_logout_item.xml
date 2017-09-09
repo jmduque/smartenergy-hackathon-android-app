@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_name"
+    style="@style/energo_settings_item_style"
+    android:foreground="?android:selectableItemBackground"
+    android:gravity="center_vertical|start"
+    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+    android:textColor="@android:color/holo_red_light"
+    tools:text="Profile" />

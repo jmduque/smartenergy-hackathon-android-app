@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/energo_small_spacing">
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/energo_content_description_icon"
+            android:padding="@dimen/energo_small_spacing"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_arrow_down" />
+
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/iv_arrow"
+            android:padding="@dimen/energo_small_spacing"
+            android:textColor="@color/energo_text_color_secondary"
+            android:textSize="@dimen/energo_text_very_large"
+            tools:text="October" />
+
+        <LinearLayout
+            android:id="@+id/ll_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_label"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/energo_small_spacing"
+            android:paddingEnd="@dimen/energo_small_spacing"
+            android:paddingStart="@dimen/energo_small_spacing">
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_margin="@dimen/energo_small_spacing" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_sells_value"
+                    style="@style/energo_ledger_value"
+                    tools:text="123.46" />
+
+                <TextView
+                    android:id="@+id/tv_sells_label"
+                    style="@style/energo_ledger_label"
+                    android:layout_alignBaseline="@id/tv_sells_value"
+                    android:layout_toStartOf="@id/tv_sells_value"
+                    android:drawableStart="@drawable/ic_ledger_sells"
+                    android:text="@string/energo_ledger_monthly_sells" />
+
+                <TextView
+                    android:id="@+id/tv_purchases_value"
+                    style="@style/energo_ledger_value"
+                    android:layout_below="@id/tv_sells_value"
+                    tools:text="123.46" />
+
+                <TextView
+                    android:id="@+id/tv_purchases_label"
+                    style="@style/energo_ledger_label"
+                    android:layout_alignBaseline="@id/tv_purchases_value"
+                    android:layout_toStartOf="@id/tv_purchases_value"
+                    android:drawableStart="@drawable/ic_ledger_purchases"
+                    android:text="@string/energo_ledger_monthly_purchases" />
+
+                <TextView
+                    android:id="@+id/tv_others_value"
+                    style="@style/energo_ledger_value"
+                    android:layout_below="@id/tv_purchases_value"
+                    tools:text="123.46" />
+
+                <TextView
+                    android:id="@+id/tv_others_label"
+                    style="@style/energo_ledger_label"
+                    android:layout_alignBaseline="@id/tv_others_value"
+                    android:layout_toStartOf="@id/tv_others_value"
+                    android:drawableStart="@drawable/ic_ledger_others"
+                    android:text="@string/energo_ledger_monthly_others" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_info" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

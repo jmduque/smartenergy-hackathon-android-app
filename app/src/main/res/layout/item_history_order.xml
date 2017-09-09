@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/energo_small_spacing"
+    android:layout_marginEnd="@dimen/energo_medium_spacing"
+    android:layout_marginStart="@dimen/energo_medium_spacing"
+    android:layout_marginTop="@dimen/energo_small_spacing"
+    app:cardCornerRadius="@dimen/energo_corner_radius_small">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/energo_small_spacing"
+            android:paddingEnd="@dimen/energo_large_spacing"
+            android:paddingStart="@dimen/energo_large_spacing"
+            android:paddingTop="@dimen/energo_small_spacing">
+
+            <TextView
+                android:id="@+id/tv_transaction_label"
+                style="@style/energo_market_order_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/energo_market_history_sell_label" />
+
+            <TextView
+                android:id="@+id/tv_transaction_energy_value"
+                style="@style/energo_market_order_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/tv_transaction_label"
+                android:drawablePadding="@dimen/energo_super_small_spacing"
+                android:drawableStart="@drawable/ic_12dp_energy_green"
+                android:gravity="center_vertical"
+                android:paddingEnd="@dimen/energo_small_spacing"
+                android:paddingStart="@dimen/energo_small_spacing"
+                android:textColor="@color/energo_market_order_history_deal"
+                android:textStyle="bold"
+                tools:text="34 KWh" />
+
+            <TextView
+                android:id="@+id/tv_transaction_deal"
+                style="@style/energo_market_order_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/energo_market_order_history_deal"
+                android:textStyle="bold"
+                tools:text="34 KWh = 26535 USD" />
+
+            <TextView
+                android:id="@+id/tv_transaction_deal_label"
+                style="@style/energo_market_order_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/tv_transaction_energy_value"
+                android:layout_toStartOf="@id/tv_transaction_deal"
+                android:gravity="end"
+                android:paddingEnd="@dimen/energo_small_spacing"
+                android:paddingStart="@dimen/energo_small_spacing"
+                android:text="@string/energo_market_history_deal_label" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/energo_market_history_order_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/energo_small_spacing"
+            android:layout_marginEnd="@dimen/energo_medium_spacing"
+            android:layout_marginStart="@dimen/energo_medium_spacing"
+            android:layout_marginTop="@dimen/energo_small_spacing"
+            android:max="100"
+            android:progress="33" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/energo_small_spacing"
+            android:paddingEnd="@dimen/energo_large_spacing"
+            android:paddingStart="@dimen/energo_large_spacing"
+            android:paddingTop="@dimen/energo_small_spacing">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="29dp"
+                android:layout_height="29dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_market_order_sell"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_market_order_history_buy" />
+
+            <TextView
+                android:id="@+id/tv_transaction_price_label"
+                style="@style/energo_market_order_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="@dimen/energo_large_spacing"
+                android:layout_marginStart="@dimen/energo_large_spacing"
+                android:layout_toEndOf="@id/iv_icon"
+                android:text="@string/energo_market_history_price_label"
+                android:textSize="@dimen/energo_text_tiny" />
+
+            <TextView
+                android:id="@+id/tv_transaction_price"
+                style="@style/energo_market_order_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/tv_transaction_price_label"
+                android:layout_below="@id/tv_transaction_price_label"
+                android:drawablePadding="@dimen/energo_super_small_spacing"
+                android:drawableStart="@drawable/ic_13dp_dollar_green"
+                android:gravity="center_vertical"
+                android:textColor="@color/energo_market_order_history_deal"
+                android:textSize="@dimen/energo_text_small"
+                android:textStyle="bold"
+                tools:text="0.6" />
+
+            <TextView
+                android:id="@+id/tv_transaction_date"
+                style="@style/energo_market_order_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="end"
+                tools:text="10:37:24\n18-11-2016" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/tv_transaction_price_label"
+                android:layout_toStartOf="@id/tv_transaction_date"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_transaction_deal_price_label"
+                    style="@style/energo_market_order_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/energo_market_history_deal_price_label" />
+
+                <TextView
+                    android:id="@+id/tv_transaction_deal_price"
+                    style="@style/energo_market_order_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="@dimen/energo_super_small_spacing"
+                    android:drawableStart="@drawable/ic_13dp_dollar_gray"
+                    android:gravity="center"
+                    android:textColor="@color/energo_text_color_secondary"
+                    android:textSize="@dimen/energo_text_small"
+                    android:textStyle="bold"
+                    tools:text="0.6" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_header"
+        style="@style/energo_binding_primary_header_text"
+        android:labelFor="@+id/et_name"
+        android:text="@string/energo_user_validation_type_header" />
+
+    <TextView
+        android:id="@+id/tv_sub_header"
+        style="@style/energo_binding_primary_sub_header_text"
+        android:text="@string/energo_user_validation_type_sub_header" />
+
+    <RadioGroup
+        android:id="@+id/rg_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/energo_large_spacing"
+        android:checkedButton="@+id/rb_family"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_family"
+            style="@style/energo_user_validation_type_option"
+            android:drawableTop="@drawable/ic_family"
+            android:text="@string/energo_user_validation_type_family" />
+
+        <RadioButton
+            android:id="@+id/rb_business"
+            style="@style/energo_user_validation_type_option"
+            android:drawableTop="@drawable/ic_business"
+            android:text="@string/energo_user_validation_type_business" />
+
+        <RadioButton
+            android:id="@+id/rb_industry"
+            style="@style/energo_user_validation_type_option"
+            android:drawableTop="@drawable/ic_industry"
+            android:text="@string/energo_user_validation_type_industry" />
+
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_disclaimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:linksClickable="true"
+        android:padding="@dimen/energo_medium_spacing"
+        android:autoLink="web"
+        android:text="@string/energo_user_validation_type_disclaimer"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse" />
+
+    <Button
+        android:id="@+id/btn_next"
+        style="@style/energo_binding_button"
+        android:text="@string/energo_smart_meter_binding_next" />
+
+</LinearLayout>

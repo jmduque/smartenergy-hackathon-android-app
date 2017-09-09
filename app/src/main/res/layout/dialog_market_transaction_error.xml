@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/energo_large_spacing"
+    android:layout_marginStart="@dimen/energo_large_spacing"
+    android:background="@null">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42.5dp"
+        android:background="@drawable/bg_white_dialog"
+        android:orientation="vertical"
+        android:padding="@dimen/energo_medium_spacing">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="42.5dp" />
+
+        <TextView
+            style="@style/energo_default_action_result_title"
+            android:text="@string/energo_market_transaction_error_title" />
+
+        <TextView
+            android:id="@+id/tv_error_message"
+            style="@style/energo_default_action_result_message"
+            android:text="@string/energo_market_transaction_error_message" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_try_again"
+            style="@style/energo_primary_blue_filled_button"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/energo_small_spacing"
+            android:text="@string/energo_wallet_withdraw_error_try_again" />
+
+    </LinearLayout>
+
+    <ImageView
+        style="@style/energo_default_action_result_icon"
+        android:contentDescription="@string/energo_content_description_icon"
+        android:src="@drawable/ic_recharge_error" />
+
+</FrameLayout>

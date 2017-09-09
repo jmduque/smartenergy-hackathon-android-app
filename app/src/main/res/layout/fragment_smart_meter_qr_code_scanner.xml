@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <me.dm7.barcodescanner.zxing.ZXingScannerView
+        android:id="@+id/scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:shouldScaleToFill="true" />
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/energo_large_spacing"
+        android:text="@string/energo_smart_meter_binding_qr_scanner_header"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large.Inverse" />
+
+    <TextView
+        android:id="@+id/tv_sub_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_header"
+        android:paddingEnd="@dimen/energo_large_spacing"
+        android:paddingStart="@dimen/energo_large_spacing"
+        android:text="@string/energo_smart_meter_binding_qr_scanner_hint"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse" />
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Spacings -->
+    <dimen name="energo_super_small_spacing">2dp</dimen>
+    <dimen name="energo_very_small_spacing">4dp</dimen>
+    <dimen name="energo_small_spacing">8dp</dimen>
+    <dimen name="energo_medium_spacing">12dp</dimen>
+    <dimen name="energo_large_spacing">16dp</dimen>
+    <dimen name="energo_very_large_spacing">20dp</dimen>
+    <dimen name="energo_double_large_spacing">32dp</dimen>
+
+    <!-- Corner Sizes -->
+    <dimen name="energo_corner_radius_tiny">2.5dp</dimen>
+    <dimen name="energo_corner_radius_small">5dp</dimen>
+    <dimen name="energo_corner_radius_medium">10dp</dimen>
+    <dimen name="energo_corner_radius_large">15dp</dimen>
+
+    <!-- Dividers Sizes -->
+    <dimen name="energo_divider_medium">1dp</dimen>
+
+    <!-- Avatar Sizes -->
+    <dimen name="energo_avatar_tiny">24dp</dimen>
+    <dimen name="energo_avatar_very_small">32dp</dimen>
+    <dimen name="energo_avatar_small">48dp</dimen>
+    <dimen name="energo_avatar_medium">64dp</dimen>
+    <dimen name="energo_avatar_large">96dp</dimen>
+    <dimen name="energo_avatar_very_large">128dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="energo_text_tiny">12sp</dimen>
+    <dimen name="energo_text_very_small">14sp</dimen>
+    <dimen name="energo_text_small">16sp</dimen>
+    <dimen name="energo_text_medium">18sp</dimen>
+    <dimen name="energo_text_large">20sp</dimen>
+    <dimen name="energo_text_very_large">22sp</dimen>
+    <dimen name="energo_text_double_tiny">24sp</dimen>
+    <dimen name="energo_text_double_very_small">28sp</dimen>
+    <dimen name="energo_text_double_small">32sp</dimen>
+    <dimen name="energo_text_double_large">40sp</dimen>
+    <dimen name="energo_text_quad_tiny">48sp</dimen>
+
+    <!-- Menu -->
+    <dimen name="energo_menu_item_height">48dp</dimen>
+    <dimen name="energo_menu_item_icon_size">16dp</dimen>
+
+    <!-- Price Chart -->
+    <dimen name="energo_price_chart_line_width">2dp</dimen>
+
+</resources>

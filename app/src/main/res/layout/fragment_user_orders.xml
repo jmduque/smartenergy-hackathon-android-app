@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rg_filters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/energo_medium_spacing">
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rb_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/energo_small_spacing"
+            android:checked="true"
+            android:text="@string/energo_market_history_all" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rb_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/energo_small_spacing"
+            android:layout_marginStart="@dimen/energo_small_spacing"
+            android:text="@string/energo_market_history_buy" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/rb_sell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/energo_small_spacing"
+            android:layout_marginStart="@dimen/energo_small_spacing"
+            android:text="@string/energo_market_history_sell" />
+
+    </RadioGroup>
+
+    <include layout="@layout/swipe_refresh_layout_recyclerview" />
+
+</LinearLayout>

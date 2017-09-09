@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="energo_energy_shake">
+        <item>Add 5 KWh</item>
+        <item>Remove 5 KWh</item>
+        <item>Add 0.5 KWh</item>
+        <item>Remove 0.5 KWh</item>
+        <item>Cancel</item>
+    </string-array>
+</resources>

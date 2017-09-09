@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/tv_date"
+                style="@style/energo_house_chart_section_header"
+                android:text="@string/energo_house_chart_date" />
+
+            <TextView
+                android:id="@+id/tv_main_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_date"
+                android:layout_marginStart="@dimen/energo_medium_spacing"
+                android:layout_marginTop="@dimen/energo_very_small_spacing"
+                android:text="@string/energo_house_chart_consumption"
+                android:textColor="@color/energo_text_color_quaternary"
+                android:textSize="@dimen/energo_text_tiny" />
+
+            <RelativeLayout
+                android:id="@+id/rl_main_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_main_label"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/tv_main_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/energo_text_color_primary"
+                    android:textSize="@dimen/energo_text_double_large"
+                    android:textStyle="bold"
+                    tools:text="10" />
+
+                <TextView
+                    android:id="@+id/tv_main_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tv_main_value"
+                    android:layout_marginStart="@dimen/energo_very_small_spacing"
+                    android:layout_toEndOf="@id/tv_main_value"
+                    android:text="@string/energo_house_chart_energy_usage_unit"
+                    android:textColor="@color/energo_text_color_secondary"
+                    android:textSize="@dimen/energo_text_tiny" />
+
+            </RelativeLayout>
+
+            <com.energolabs.evergo.ui.views.EnergoLineChart
+                android:id="@+id/lineChart"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/rl_main_value" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lineChart">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/energo_medium_spacing"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_left_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_left_icon"
+                            style="@style/energo_house_chart_secondary_icon"
+                            android:contentDescription="@string/energo_content_description_icon"
+                            android:src="@drawable/ic_produced" />
+
+                        <TextView
+                            android:id="@+id/tv_left_label"
+                            style="@style/energo_house_chart_secondary_label"
+                            android:layout_toEndOf="@id/iv_left_icon"
+                            android:text="@string/energo_house_chart_produced" />
+
+                        <TextView
+                            android:id="@+id/tv_left_value"
+                            style="@style/energo_house_chart_secondary_value"
+                            android:layout_alignStart="@id/tv_left_label"
+                            android:layout_below="@id/tv_left_label"
+                            tools:text="19.8" />
+
+                        <TextView
+                            android:id="@+id/tv_left_unit"
+                            style="@style/energo_house_chart_secondary_value_unit"
+                            android:layout_alignBaseline="@id/tv_left_value"
+                            android:layout_toEndOf="@id/tv_left_value"
+                            android:text="@string/energo_house_chart_energy_usage_unit" />
+
+                    </RelativeLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/energo_medium_spacing"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_right_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_right_icon"
+                            style="@style/energo_house_chart_secondary_icon"
+                            android:contentDescription="@string/energo_content_description_icon"
+                            android:src="@drawable/ic_savings" />
+
+                        <TextView
+                            android:id="@+id/tv_right_label"
+                            style="@style/energo_house_chart_secondary_label"
+                            android:layout_toEndOf="@id/iv_right_icon"
+                            android:text="@string/energo_house_chart_savings" />
+
+                        <TextView
+                            android:id="@+id/tv_right_value"
+                            style="@style/energo_house_chart_secondary_value"
+                            android:layout_alignStart="@id/tv_right_label"
+                            android:layout_below="@id/tv_right_label"
+                            tools:text="9.8" />
+
+                        <TextView
+                            android:id="@+id/tv_right_unit"
+                            style="@style/energo_house_chart_secondary_value_unit"
+                            android:layout_alignBaseline="@id/tv_right_value"
+                            android:layout_toEndOf="@id/tv_right_value"
+                            android:text="@string/energo_house_chart_energy_usage_unit" />
+
+                    </RelativeLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/energo_medium_spacing"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/tv_proportion_header"
+                style="@style/energo_house_chart_section_header"
+                android:text="@string/energo_house_chart_proportion" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_alignBottom="@+id/pieChart"
+                android:layout_alignEnd="@+id/pieChart"
+                android:layout_alignStart="@+id/pieChart"
+                android:layout_alignTop="@+id/pieChart"
+                android:layout_margin="40dp" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_below="@id/tv_proportion_header"
+                android:layout_margin="@dimen/energo_medium_spacing" />
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_alignBottom="@id/pieChart"
+                android:layout_alignEnd="@id/pieChart"
+                android:layout_alignStart="@id/pieChart"
+                android:layout_alignTop="@id/pieChart"
+                android:layout_margin="25dp"
+                android:background="@null"
+                android:contentDescription="@string/energo_content_description_background"
+                android:src="@drawable/bg_house_chart_usage_chart" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tl_viewpager_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:layout_alignEnd="@id/viewPager"
+                android:layout_alignStart="@id/viewPager"
+                android:layout_below="@id/viewPager"
+                android:layout_marginTop="@dimen/energo_very_small_spacing"
+                app:tabBackground="@drawable/ic_house_chart_viewpager_indicator"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp" />
+
+            <TextView
+                android:id="@+id/tv_tab_layout_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/tl_viewpager_indicator"
+                android:layout_alignStart="@id/tl_viewpager_indicator"
+                android:layout_below="@id/tl_viewpager_indicator"
+                android:layout_marginBottom="@dimen/energo_small_spacing"
+                android:layout_marginTop="@dimen/energo_very_small_spacing"
+                android:gravity="center_horizontal"
+                android:textColor="@color/energo_text_color_secondary"
+                android:textSize="@dimen/energo_text_tiny"
+                tools:text="Public Grid" />
+
+            <RadioGroup
+                android:id="@+id/rg_time_frames"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/energo_medium_spacing"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_day_label"
+                    style="@style/energo_house_chart_time_frame_label"
+                    android:text="@string/energo_market_price_chart_day_label" />
+
+                <RadioButton
+                    android:id="@+id/rb_week_label"
+                    style="@style/energo_house_chart_time_frame_label"
+                    android:checked="true"
+                    android:text="@string/energo_market_price_chart_week_label"
+                    android:textSize="@dimen/energo_text_medium" />
+
+                <RadioButton
+                    android:id="@+id/rb_month_label"
+                    style="@style/energo_house_chart_time_frame_label"
+                    android:text="@string/energo_market_price_chart_month_label" />
+
+                <RadioButton
+                    android:id="@+id/rb_year_label"
+                    style="@style/energo_house_chart_time_frame_label"
+                    android:text="@string/energo_market_price_chart_year_label" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

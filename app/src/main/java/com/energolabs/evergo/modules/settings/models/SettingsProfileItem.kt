@@ -1,0 +1,15 @@
+package com.energolabs.evergo.modules.settings.models
+
+import com.energolabs.evergo.modules.user.profile.models.UserModel
+
+/**
+ * Created by Jose on 11/27/2016.
+ * Copyright (C) 2016 Energo Labs
+ *
+ *
+ * Copy or sale of this class is forbidden.
+ */
+class SettingsProfileItem : SettingsItem() {
+
+    var userModel: UserModel? = null
+}

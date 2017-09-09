@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_next"
+        style="@style/energo_binding_button"
+        android:layout_alignParentBottom="true"
+        android:text="@string/energo_smart_meter_binding_next" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_next">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_header"
+                style="@style/energo_binding_primary_header_text"
+                android:labelFor="@+id/et_name"
+                android:text="@string/energo_user_validation_id_photo_header" />
+
+            <TextView
+                android:id="@+id/tv_sub_header"
+                style="@style/energo_binding_primary_sub_header_text"
+                android:text="@string/energo_user_validation_id_photo_sub_header" />
+
+            <FrameLayout
+                android:id="@+id/fl_front"
+                style="@style/energo_user_validation_photo_layout">
+
+                <TextView
+                    style="@style/energo_user_validation_photo_text"
+                    android:drawableTop="@drawable/ic_front_card"
+                    android:text="@string/energo_user_validation_id_photo_front" />
+
+                <ImageView
+                    android:id="@+id/iv_front"
+                    style="@style/energo_user_validation_photo_image_view" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_back"
+                style="@style/energo_user_validation_photo_layout">
+
+                <TextView
+                    style="@style/energo_user_validation_photo_text"
+                    android:drawableTop="@drawable/ic_back_card"
+                    android:text="@string/energo_user_validation_id_photo_back" />
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    style="@style/energo_user_validation_photo_image_view" />
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

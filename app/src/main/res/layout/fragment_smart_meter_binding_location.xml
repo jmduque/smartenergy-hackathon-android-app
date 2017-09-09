@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_header"
+        style="@style/energo_binding_primary_header_text"
+        android:labelFor="@+id/et_area"
+        android:text="@string/energo_smart_meter_binding_address" />
+
+    <TextView
+        android:id="@+id/tv_sub_header"
+        style="@style/energo_binding_primary_sub_header_text"
+        android:text="@string/energo_smart_meter_binding_address_hint" />
+
+    <EditText
+        android:id="@+id/et_area"
+        style="@style/energo_binding_edit_text"
+        android:focusable="false"
+        android:hint="@string/energo_smart_meter_binding_area_hint"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/tv_address_header"
+        style="@style/energo_binding_secondary_header_text"
+        android:labelFor="@+id/et_address"
+        android:text="@string/energo_smart_meter_binding_detail_address" />
+
+    <TextView
+        android:id="@+id/tv_address_sub_header"
+        style="@style/energo_binding_secondary_sub_header_text"
+        android:text="@string/energo_smart_meter_binding_detail_address_hint" />
+
+    <EditText
+        android:id="@+id/et_address"
+        style="@style/energo_binding_edit_text"
+        android:inputType="textPersonName" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn_next"
+        style="@style/energo_binding_button"
+        android:text="@string/energo_smart_meter_binding_next" />
+
+</LinearLayout>

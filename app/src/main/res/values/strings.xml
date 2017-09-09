@@ -1,0 +1,381 @@
+<resources>
+    <string name="app_name">EVergo</string>
+
+    <!-- Common Values -->
+    <string name="str_wait">Please wait…</string> 
+    <string name="str_no_connected_to_internet">Connect the network and try again</string>
+    <string name="energo_check_camera_permissions">Check application permissions for Camera</string>
+    <string name="energo_check_read_external_storage_permissions">Check application permissions to Read External Storage</string>
+    <string name="energo_check_write_external_storage_permissions">Check application permissions to Write External Storage</string>
+    <string name="energo_see_all">See All</string>
+
+    <!-- Common Market Defaults -->
+    <string name="energo_default_energy_balance" translatable="false">0.00</string>
+    <string name="energo_default_currency_balance" translatable="false">0.00</string>
+    <string name="energo_default_energy_price_balance" translatable="false">0.000</string>
+    <string name="energo_currency_format" translatable="false">%1$.2f</string>
+    <string name="energo_energy_format" translatable="false">%1$.2f</string>
+    <string name="energo_price_format" translatable="false">%1$.3f</string>
+
+    <!-- Content Descriptors -->
+    <string name="energo_content_description_icon" translatable="false">Icon</string>
+    <string name="energo_content_description_avatar" translatable="false">Avatar</string>
+    <string name="energo_content_description_background" translatable="false">Background</string>
+
+    <!-- Main Screen -->
+    <string name="energo_main_energy_balance">Energy Balance</string>
+    <string name="energo_main_energy_best_price">Best Price</string>
+    <string name="energo_main_creation">Creation</string>
+    <string name="energo_main_usage">Usage</string>
+    <string name="energo_main_market">Market</string>
+    <string name="energo_main_wallet">Wallet</string>
+    <string name="energo_main_bill">Bill</string>
+    <string name="energo_main_ledger">Ledger</string>
+    <string name="energo_main_devices">Devices</string>
+    <string name="energo_main_market_agent">Market Agent</string>
+    <string name="energo_main_order_type_buy">Buy</string>
+    <string name="energo_main_order_type_sell">Sell</string>
+    <string name="energo_main_order_percentage" translatable="false">%1$d%%</string>
+    <string name="energo_main_order_price" translatable="false">%1$.2f PHP</string>
+
+    <!-- Energy Wallet -->
+    <string name="energo_energy_wallet_add_energy">Added %1$.3f KWh to your balance</string>
+    <string name="energo_energy_wallet_removed_energy">Removed %1$.3f KWh to your balance</string>
+
+    <!-- Country Selector -->
+    <string name="energo_country_selector_title">Countries</string>
+
+    <!-- Phone Code -->
+    <string name="energo_phone_code_get_code">Get Code</string>
+    <string name="energo_phone_code_header">Input Verification Code</string>
+    <string name="energo_phone_code_hint">i.e. 123456</string>
+    <string name="energo_phone_code_error">Invalid verification code</string>
+    <string name="energo_phone_code_time_count_down" translatable="false">%1$ds</string>
+
+    <!-- Login Screen -->
+    <string name="energo_login_sign_in">Sign In</string>
+    <string name="energo_login_sign_up">Sign Up</string>
+    <string name="energo_login_phone_header">Phone</string>
+    <string name="energo_login_phone_hint">Your phone number</string>
+    <string name="energo_login_password_header">Password</string>
+    <string name="energo_login_password_hint">Your expected password</string>
+    <string name="energo_login_password_repeat_hint">Input password again</string>
+    <string name="energo_login_forgot_password">Forgot Password</string>
+    <string name="energo_login_error">Invalid username or password</string>
+    <string name="energo_phone_error">Invalid phone number</string>
+    <string name="energo_password_error">Invalid password</string>
+    <string name="energo_passwords_dont_match_error">Passwords don\'t match</string>
+
+    <!-- Forgot Password -->
+    <string name="energo_forgot_password_password_header">New Password</string>
+    <string name="energo_forgot_password_password_hint">Your expected new password</string>
+    <string name="energo_forgot_password_password_repeat_hint">Input new password again</string>
+    <string name="energo_forgot_password_submit">Submit</string>
+
+    <!-- Settings -->
+    <string name="energo_settings_title">Settings</string>
+    <string name="energo_settings_my_account">My Account</string>
+    <string name="energo_settings_profile">Profile</string>
+    <string name="energo_settings_profile_not_verified">Not Verified</string>
+    <string name="energo_settings_profile_verified">Verified</string>
+    <string name="energo_settings_contact">Contact</string>
+    <string name="energo_settings_app_settings">App Settings</string>
+    <string name="energo_settings_enable_push">Enable Push</string>
+    <string name="energo_settings_security">Security</string>
+    <string name="energo_settings_password">Password</string>
+    <string name="energo_settings_payment_password">Payment Password</string>
+    <string name="energo_settings_phone">Phone</string>
+    <string name="energo_settings_help">Help</string>
+    <string name="energo_settings_legal">Legal</string>
+    <string name="energo_settings_update">Update</string>
+    <string name="energo_settings_logout">Logout</string>
+
+    <!-- Wallet -->
+    <string name="energo_wallet_title">Wallet</string>
+    <string name="energo_wallet_date">Date</string>
+    <string name="energo_wallet_currency_header">Balance</string>
+    <string name="energo_wallet_currency_symbol">PHP</string>
+    <string name="energo_wallet_currency_recharge">Recharge</string>
+    <string name="energo_wallet_currency_withdraw">Withdraw</string>
+    <string name="energo_wallet_transaction_value_format" translatable="false">%1$s%2$.2f %3$s</string>
+
+    <!-- Recharge -->
+    <string name="energo_wallet_recharge_title">Recharge</string>
+    <string name="energo_wallet_recharge_amount_hint">Amount to be recharged</string>
+    <string name="energo_wallet_recharge_action">Recharge</string>
+    <string name="energo_wallet_recharge_error_title">Oops</string>
+    <string name="energo_wallet_recharge_error_invalid_amount">Need to specify a valid recharge amount</string>
+    <string name="energo_wallet_recharge_error_message">Something went wrong, try again later</string>
+    <string name="energo_wallet_recharge_error_try_again">Try Again</string>
+    <string name="energo_wallet_recharge_success_title">Success</string>
+    <string name="energo_wallet_recharge_success_message">Successfully recharged %1$.2f %2$s</string>
+    <string name="energo_wallet_recharge_success_continue_recharge">Continue to Recharge</string>
+    <string name="energo_wallet_recharge_success_return">Return</string>
+
+    <!-- Withdraw -->
+    <string name="energo_wallet_withdraw_title">Withdraw</string>
+    <string name="energo_wallet_withdraw_account_header">Account</string>
+    <string name="energo_wallet_withdraw_account_hint">Account to receive the withdraw</string>
+    <string name="energo_wallet_withdraw_amount_hint">Amount to be withdraw</string>
+    <string name="energo_wallet_withdraw_action">Withdraw</string>
+    <string name="energo_wallet_withdraw_error_title">Error</string>
+    <string name="energo_wallet_withdraw_error_message">System Timeout</string>
+    <string name="energo_wallet_withdraw_error_try_again">Try Again</string>
+    <string name="energo_wallet_withdraw_ongoing_title">Ongoing</string>
+    <string name="energo_wallet_withdraw_ongoing_message">We will deposit within 1–3 days to the designer account</string>
+    <string name="energo_wallet_withdraw_ongoing_return">Return</string>
+    <string name="energo_wallet_withdraw_default_fee_description">-Fee 0.8%</string>
+    <string name="energo_wallet_withdraw_alipay_fee">Cash will be withheld Alipay 0.6%% fee</string>
+
+    <!-- Market -->
+    <string name="energo_market_title">Market</string>
+    <string name="energo_market_buy_title">Buy</string>
+    <string name="energo_market_sell_title">Sell</string>
+    <string name="energo_market_ongoing_title">Ongoing</string>
+    <string name="energo_market_history_title">History</string>
+    <string name="energo_market_chart">Chart</string>
+    <string name="energo_market_transaction_confirm_title">Transaction Details</string>
+    <string name="energo_market_transaction_confirm_price_label">Price</string>
+    <string name="energo_market_transaction_confirm_price_format">%1$.2f%2$s=%3$.2f%4$s</string>
+    <string name="energo_market_transaction_confirm_amount_label">Amount</string>
+    <string name="energo_market_transaction_confirm_amount_format" translatable="false">%1$.2f%2$s</string>
+    <string name="energo_market_transaction_confirm_fee_label">Fee</string>
+    <string name="energo_market_transaction_confirm_fee_format" translatable="false">%1$.2f%2$s</string>
+    <string name="energo_market_transaction_confirm_total_label">Total</string>
+    <string name="energo_market_transaction_confirm_total_format" translatable="false">%1$.2f%2$s</string>
+    <string name="energo_market_transaction_confirm_action">Confirm</string>
+    <string name="energo_market_transaction_error_title">Oops</string>
+    <string name="energo_market_transaction_error_message">Something went wrong, try again later</string>
+    <string name="energo_market_transaction_error_try_again">Try Again</string>
+    <string name="energo_wallet_transaction_payment_password_message">This transaction will consume 1%% fee</string>
+
+    <!-- Market Order -->
+    <string name="energo_market_currency_balance_label">Balance</string>
+    <string name="energo_market_order_quick">Quick</string>
+    <string name="energo_market_order_market">Market</string>
+    <string name="energo_market_order_energy_amount_label">Amount</string>
+    <string name="energo_market_order_energy_price_label">Price</string>
+    <string name="energo_market_order_total">Total</string>
+
+    <!-- Market Buy -->
+    <string name="energo_market_buy_energy_amount_hint">Amount of KWh to be purchased</string>
+    <string name="energo_market_buy_energy_price_hint">Buy order price each KWh</string>
+    <string name="energo_market_buy_action">Buy now!</string>
+
+    <!-- Market Sell -->
+    <string name="energo_market_sell_energy_amount_hint">Amount of KWh to be sold</string>
+    <string name="energo_market_sell_energy_price_hint">Sell order price each KWh</string>
+    <string name="energo_market_sell_action">Sell now!</string>
+
+    <!-- Market Ongoing Transactions -->
+    <string name="energo_market_ongoing_buy_transaction_label">Buying at: %1$.3f %2$s</string>
+    <string name="energo_market_ongoing_sell_transaction_label">Selling at: %1$.3f %2$s</string>
+    <string name="energo_market_ongoing_transaction_traded">Traded: %1$.2f</string>
+    <string name="energo_market_ongoing_transaction_remaining">Remaining: %1$.2f</string>
+    <string name="energo_market_ongoing_transaction_change_rate">(Price: %1$.2f %2$s/%3$s)</string>
+
+    <!-- Market Orders History -->
+    <string name="energo_market_history_all">All</string>
+    <string name="energo_market_history_buy">Buy</string>
+    <string name="energo_market_history_sell">Sell</string>
+    <string name="energo_market_history_sell_label">Sell:</string>
+    <string name="energo_market_history_buy_label">Buy:</string>
+    <string name="energo_market_history_deal_label">Deal:</string>
+    <string name="energo_market_history_deal_format">%1$.2fKWh=%2$.2fPHP</string>
+    <string name="energo_market_history_price_label">Price:</string>
+    <string name="energo_market_history_deal_price_label">Deal Price:</string>
+
+    <!-- User Profile -->
+    <string name="energo_user_profile_title">Profile</string>
+    <string name="energo_user_profile_avatar_label">Photo</string>
+    <string name="energo_user_profile_name_label">Name</string>
+    <string name="energo_user_profile_name_hint">Tap to set Name</string>
+    <string name="energo_user_profile_gender_label">Gender</string>
+    <string name="energo_user_profile_gender_unknown">Undefined</string>
+    <string name="energo_user_profile_gender_male">Male</string>
+    <string name="energo_user_profile_gender_female">Female</string>
+    <string name="energo_user_profile_gender_other">Other</string>
+    <string name="energo_user_profile_type_label">Type</string>
+    <string name="energo_user_profile_type_unknown">Undefined</string>
+    <string name="energo_user_profile_type_family">Family</string>
+    <string name="energo_user_profile_type_business">Business</string>
+    <string name="energo_user_profile_type_industry">Industry</string>
+    <string name="energo_user_profile_address_label">Address</string>
+    <string name="energo_user_profile_address_unknown">Undefined</string>
+
+    <!-- Ledger -->
+    <string name="energo_ledger_title">Ledger</string>
+    <string name="energo_ledger_monthly_recharges">Recharges</string>
+    <string name="energo_ledger_monthly_withdraws">Withdraws</string>
+    <string name="energo_ledger_monthly_transactions">Transactions</string>
+    <string name="energo_ledger_monthly_sells">Sells</string>
+    <string name="energo_ledger_monthly_purchases">Purchases</string>
+    <string name="energo_ledger_monthly_others">Others</string>
+    <string name="energo_ledger_market_transaction_description">(Price: %1$.3f&lt;sub&gt;&lt;small&gt;%2$s&lt;/small&gt;&lt;/sub&gt;&lt;small&gt;=%3$.2f&lt;sub&gt;%4$s&lt;/small&gt;&lt;/sub&gt;)</string>
+
+    <!-- Market Price Chart -->
+    <string name="energo_market_price_chart_title">Price Chart</string>
+    <string name="energo_market_price_chart_positive_fluctuation" translatable="false">+%1$.2f%%</string>
+    <string name="energo_market_price_chart_negative_fluctuation" translatable="false">-%1$.2f%%</string>
+    <string name="energo_market_price_chart_12hours_label">12 Hours</string>
+    <string name="energo_market_price_chart_day_label">Day</string>
+    <string name="energo_market_price_chart_week_label">Week</string>
+    <string name="energo_market_price_chart_month_label">Month</string>
+    <string name="energo_market_price_chart_year_label">Year</string>
+
+    <!-- Market Options -->
+    <string name="energo_market_options_title">Market Options</string>
+    <string name="energo_market_options_total_label">Total:</string>
+    <string name="energo_market_options_volume_value">%1$.2f(M)</string>
+    <string name="energo_market_options_bid">Bid</string>
+    <string name="energo_market_options_ask">Ask</string>
+
+    <!-- Devices -->
+    <string name="energo_devices_title">Devices</string>
+    <string name="energo_devices_smart_meter">Smart Meter</string>
+    <string name="energo_devices_solar_energy">Solar Energy</string>
+
+    <!-- Smart Meter Device List -->
+    <string name="energo_smart_meter_device_list_title">Smart Meters</string>
+    <string name="energo_smart_meter_device_list_add_first_hint">Click on the \"+\" to bind an smart meter with your account</string>
+    <string name="energo_smart_meter_device_list_off_grid">Off Grid</string>
+    <string name="energo_smart_meter_device_list_main_grid">Main Grid</string>
+
+    <!-- Smart Meter Binding -->
+    <string name="energo_smart_meter_binding_title">Smart Meters</string>
+    <string name="energo_smart_meter_binding_qr_scanner_header">Add your smart meter</string>
+    <string name="energo_smart_meter_binding_qr_scanner_hint">Scanning smart meter body QR Code</string>
+    <string name="energo_smart_meter_binding_name">Name</string>
+    <string name="energo_smart_meter_binding_name_hint">Give your smart meter a nice name</string>
+    <string name="energo_smart_meter_binding_error_name">Name can\'t be left empty</string>
+    <string name="energo_smart_meter_binding_address">Address</string>
+    <string name="energo_smart_meter_binding_address_hint">Please tell us the actual installation address</string>
+    <string name="energo_smart_meter_binding_area_hint">Area</string>
+    <string name="energo_smart_meter_binding_detail_address">Detail Address</string>
+    <string name="energo_smart_meter_binding_detail_address_hint">At least 5 words</string>
+    <string name="energo_smart_meter_binding_error_area">Area can\'t be left empty</string>
+    <string name="energo_smart_meter_binding_error_address">Address can\'t be left empty</string>
+    <string name="energo_smart_meter_binding_success_header">Success</string>
+    <string name="energo_smart_meter_binding_success_subheader">Now you can use Energo to exchange clean energy!</string>
+    <string name="energo_smart_meter_binding_next">Next</string>
+    <string name="energo_smart_meter_binding_done">Done</string>
+
+    <!-- Smart Meter Profile -->
+    <string name="energo_smart_meter_profile_title">Smart Meter</string>
+    <string name="energo_smart_meter_profile_owned_title">%1$s\'s Meter</string>
+    <string name="energo_smart_meter_profile_name_label">Name</string>
+    <string name="energo_smart_meter_profile_attach_to_label">Attach to</string>
+    <string name="energo_smart_meter_profile_status_label">Status</string>
+    <string name="energo_smart_meter_profile_access_time_label">Access time</string>
+    <string name="energo_smart_meter_profile_model_label">Model</string>
+    <string name="energo_smart_meter_profile_version_label">Version</string>
+    <string name="energo_smart_meter_profile_uuid_label">UUID</string>
+    <string name="energo_smart_meter_profile_default_value">Undefined</string>
+
+    <!-- User Validation -->
+    <string name="energo_user_validation_title">Identity</string>
+    <string name="energo_user_validation_next">Next</string>
+    <string name="energo_user_validation_done">Done</string>
+    <string name="energo_user_validation_type_header">Select True Identity</string>
+    <string name="energo_user_validation_type_sub_header">Don\'t worry, we\'ll never let the information go.</string>
+    <string name="energo_user_validation_type_family">Family</string>
+    <string name="energo_user_validation_type_business">Business</string>
+    <string name="energo_user_validation_type_industry">Industry</string>
+    <string name="energo_user_validation_type_disclaimer">Identity authentication means that you agree to <a href="http://www.baidu.com">The Terms of Service</a>, the final identity will affect your transaction processing rates, etc.</string>
+    <string name="energo_user_validation_name_header">Improve True Information</string>
+    <string name="energo_user_validation_name_sub_header">Don\'t worry, we\'ll never let the information go.</string>
+    <string name="energo_user_validation_name_hint">Your Real Name</string>
+    <string name="energo_user_validation_name_error">Name can\'t be left empty</string>
+    <string name="energo_user_validation_location_header">Address</string>
+    <string name="energo_user_validation_location_sub_header">Please tell us the actual installation address</string>
+    <string name="energo_user_validation_location_area_hint">Area</string>
+    <string name="energo_user_validation_location_address_header">Detailed Address</string>
+    <string name="energo_user_validation_location_address_sub_header">At least 5 words</string>
+    <string name="energo_user_validation_location_address_hint">Street, Number, Room, etc.</string>
+    <string name="energo_user_validation_id_photo_header">Identity Verification</string>
+    <string name="energo_user_validation_id_photo_sub_header">Please take a photo of your ID Card</string>
+    <string name="energo_user_validation_id_photo_front">Display Front Photo</string>
+    <string name="energo_user_validation_id_photo_back">Display Back Photo</string>
+    <string name="energo_user_validation_id_photo_front_missing_error">Front ID Photo is required</string>
+    <string name="energo_user_validation_id_photo_back_missing_error">Back ID Photo is required</string>
+    <string name="energo_user_validation_success_header">Success</string>
+    <string name="energo_user_validation_success_sub_header">We\'ll check your identity\nwithin 1–2 working days</string>
+    <string name="energo_user_validation_ongoing_header">On Going</string>
+    <string name="energo_user_validation_ongoing_sub_header">We\'ll check your identity\nwithin 1–2 working days</string>
+
+    <!-- Location Selector -->
+    <string name="energo_location_selector_title">Locations</string>
+
+    <!-- Change Password -->
+    <string name="energo_change_password_title">Change Login Password</string>
+    <string name="energo_change_password_current_password_header">Enter your login password to verify your identity</string>
+    <string name="energo_change_password_current_password_label">Password</string>
+    <string name="energo_change_password_current_password_hint">Enter password</string>
+    <string name="energo_change_password_new_password_header">Enter your new password</string>
+    <string name="energo_change_password_new_password_label">New Password</string>
+    <string name="energo_change_password_new_password_hint">Enter New password</string>
+    <string name="energo_change_password_new_password_repeat_label">Input Again</string>
+    <string name="energo_change_password_new_password_repeat_hint">Enter again to confirm</string>
+    <string name="energo_change_password_submit">Submit</string>
+    <string name="energo_change_password_error_missing_current_password">Current password is required</string>
+    <string name="energo_change_password_error_new_password_dont_match">New password either empty or not match</string>
+
+    <!-- Change Password Success -->
+    <string name="energo_change_password_success_title">Password</string>
+    <string name="energo_change_password_success_header">Success</string>
+    <string name="energo_change_password_success_body">You\'ve changed the password\nplease keep in mind</string>
+    <string name="energo_change_password_success_return">Return</string>
+
+    <!-- Change Payment Password -->
+    <string name="energo_change_payment_password_title">Change Payment Password</string>
+    <string name="energo_change_payment_password_current_label">Current payment password</string>
+    <string name="energo_change_payment_password_new_label">Reset Payment Password</string>
+    <string name="energo_change_payment_password_new_repeat_label">Input Again</string>
+    <string name="energo_change_payment_password_submit">Submit</string>
+
+    <!-- Change Payment Password -->
+    <string name="energo_set_payment_password_title">Set Payment Password</string>
+    <string name="energo_set_payment_password_new_label">Set Payment Password</string>
+    <string name="energo_set_payment_password_new_repeat_label">Input Again</string>
+    <string name="energo_set_payment_password_submit">Submit</string>
+
+    <!-- Dialog Payment Password -->
+    <string name="energo_dialog_payment_password_title">Payment Password</string>
+    <string name="energo_dialog_payment_password_confirm">Confirm</string>
+    <string name="energo_dialog_payment_password_cancel">Cancel</string>
+    <string name="energo_dialog_payment_password_missing_message">You have not set the transaction password</string>
+    <string name="energo_dialog_payment_password_go_set">Go Set</string>
+
+    <!-- House Charts -->
+    <string name="energo_house_chart_title">House Chart</string>
+    <string name="energo_house_chart_date">Today</string>
+    <string name="energo_house_chart_energy_usage_format" translatable="false">%1$.1f</string>
+    <string name="energo_house_chart_energy_usage_unit">/kWh</string>
+    <string name="energo_house_chart_consumption">Consumption</string>
+    <string name="energo_house_chart_produced">Produced</string>
+    <string name="energo_house_chart_savings">Savings</string>
+    <string name="energo_house_chart_proportion">Proportion</string>
+
+    <!-- Market Agent -->
+    <string name="energo_market_agent_title">Market Agent</string>
+    <string name="energo_market_agent_latest_price">Latest Price (PHP/KWh)</string>
+    <string name="energo_market_agent_auto_buy">Auto Buy</string>
+    <string name="energo_market_agent_set_highest">(Set highest)</string>
+    <string name="energo_market_agent_auto_buy_info">When your energy balance goes below 1KWh, we will create an order to buy at your desired price</string>
+    <string name="energo_market_agent_auto_sell">Auto Sell</string>
+    <string name="energo_market_agent_set_lowest">(Set lowest)</string>
+    <string name="energo_market_agent_auto_sell_info">When your energy balance goes over 4KWh, we will create an order to sell at your desired price</string>
+    <string name="energo_market_agent_value_step">0.01</string>
+    <string name="energo_market_agent_payment_password_message">Automatic transactions will also consume 1%% fee</string>
+    <string name="energo_market_agent_order_history">Order History</string>
+
+    <!-- Update -->
+    <string name="energo_update_title">Update</string>
+    <string name="energo_check_updates_in_progress">Checking\nUpdates</string>
+    <string name="energo_check_updates_no_new_version">Your version is the latest</string>
+    <string name="energo_check_updates_progress" translatable="false">%1$d%%</string>
+    <string name="energo_update_action_not_yet">Not Yet</string>
+    <string name="energo_update_action_update">Update</string>
+    <string name="energo_update_action_no_update">Return</string>
+
+</resources>

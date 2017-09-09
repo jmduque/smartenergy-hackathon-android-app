@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/energo_small_spacing"
+    android:paddingEnd="@dimen/energo_large_spacing"
+    android:paddingStart="@dimen/energo_large_spacing"
+    android:paddingTop="@dimen/energo_small_spacing">
+
+    <TextView
+        android:id="@+id/tv_transaction_traded"
+        style="@style/energo_market_order_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/progressBar"
+        tools:text="Traded: 35464" />
+
+    <TextView
+        android:id="@+id/tv_transaction_remaining"
+        style="@style/energo_market_order_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tv_transaction_traded"
+        android:paddingEnd="@dimen/energo_small_spacing"
+        android:paddingStart="@dimen/energo_small_spacing"
+        tools:text="Remaining: 35464" />
+
+    <TextView
+        android:id="@+id/tv_transaction_date"
+        style="@style/energo_market_order_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/tv_transaction_remaining"
+        android:gravity="end"
+        tools:text="18-11-2016" />
+
+    <TextView
+        android:id="@+id/tv_transaction_price"
+        style="@style/energo_market_order_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tv_transaction_traded"
+        tools:text="(Price: 586.21PHP/KWh)" />
+
+</RelativeLayout>

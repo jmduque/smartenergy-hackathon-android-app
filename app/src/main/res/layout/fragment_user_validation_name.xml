@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_header"
+        style="@style/energo_binding_primary_header_text"
+        android:labelFor="@+id/et_name"
+        android:text="@string/energo_user_validation_name_header" />
+
+    <TextView
+        android:id="@+id/tv_sub_header"
+        style="@style/energo_binding_primary_sub_header_text"
+        android:text="@string/energo_user_validation_name_sub_header" />
+
+    <EditText
+        android:id="@+id/et_name"
+        style="@style/energo_binding_edit_text"
+        android:hint="@string/energo_user_validation_name_hint"
+        android:inputType="textPersonName" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn_next"
+        style="@style/energo_binding_button"
+        android:text="@string/energo_smart_meter_binding_next" />
+
+</LinearLayout>

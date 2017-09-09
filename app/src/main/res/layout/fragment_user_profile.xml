@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_avatar"
+        style="@style/energo_profile_item"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_avatar_label"
+            style="@style/energo_profile_item_label"
+            android:text="@string/energo_user_profile_avatar_label" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/energo_avatar_medium"
+            android:layout_height="@dimen/energo_avatar_medium"
+            android:contentDescription="@string/energo_content_description_avatar"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_default_avatar_girl" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_name"
+        style="@style/energo_profile_item"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_name_label"
+            style="@style/energo_profile_item_label"
+            android:text="@string/energo_user_profile_name_label" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/energo_profile_item_value"
+            android:hint="@string/energo_user_profile_name_hint"
+            tools:text="John Doe" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_gender"
+        style="@style/energo_profile_item"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_gender_label"
+            style="@style/energo_profile_item_label"
+            android:text="@string/energo_user_profile_gender_label" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            style="@style/energo_profile_item_value"
+            android:text="@string/energo_user_profile_gender_unknown" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_type"
+        style="@style/energo_profile_item"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_type_label"
+            style="@style/energo_profile_item_label"
+            android:layout_width="wrap_content"
+            android:layout_weight="0"
+            android:drawableEnd="@drawable/ic_i"
+            android:drawablePadding="@dimen/energo_small_spacing"
+            android:text="@string/energo_user_profile_type_label" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            style="@style/energo_profile_item_value"
+            android:layout_width="match_parent"
+            android:text="@string/energo_user_profile_type_family" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_address"
+        style="@style/energo_profile_item"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_address_label"
+            style="@style/energo_profile_item_label"
+            android:text="@string/energo_user_profile_address_label" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            style="@style/energo_profile_item_value"
+            android:text="@string/energo_user_profile_address_unknown" />
+
+    </LinearLayout>
+
+</LinearLayout>
