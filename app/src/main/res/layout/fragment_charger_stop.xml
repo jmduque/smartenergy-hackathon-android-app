@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#293245"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_ev_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/energo_large_spacing"
+        android:layout_marginTop="@dimen/energo_double_large_spacing"
+        android:paddingTop="4dp"
+        android:src="@drawable/ic_battery_ev" />
+
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/energo_small_spacing"
+        android:layout_marginTop="@dimen/energo_double_large_spacing"
+        android:layout_toEndOf="@id/iv_ev_icon"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/energo_charger_default_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/energo_text_large" />
+
+        <TextView
+            android:id="@+id/tv_power"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/energo_medium_spacing"
+            android:text="@string/energo_charger_default_power"
+            android:textColor="@color/white"
+            android:textSize="@dimen/energo_text_medium" />
+
+        <TextView
+            android:id="@+id/tv_voltage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/energo_charger_default_voltage"
+            android:textColor="@color/white"
+            android:textSize="@dimen/energo_text_medium" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/energo_large_spacing"
+            android:text="@string/energo_charger_status_charging"
+            android:textColor="@color/white"
+            android:textSize="@dimen/energo_text_medium" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/energo_very_large_spacing"
+        android:layout_marginTop="@dimen/energo_double_large_spacing"
+        android:src="@drawable/ic_charger" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_recharge"
+        style="@style/energo_primary_filled_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_info"
+        android:layout_margin="@dimen/energo_double_large_spacing"
+        android:text="@string/energo_charger_recharge_stop" />
+
+</RelativeLayout>

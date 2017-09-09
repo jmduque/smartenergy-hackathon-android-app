@@ -409,4 +409,17 @@
     <string name="energo_battery_status_tag">Status</string>
     <string name="energo_battery_charge_tag">Charge</string>
 
+    <!-- Charger Info -->
+    <string name="energo_charger_title">Charger</string>
+    <string name="energo_charger_default_name">Supercharger III</string>
+    <string name="energo_charger_default_voltage">Voltage: 220V AC</string>
+    <string name="energo_charger_default_power">Power: 4.4KW</string>
+    <string name="energo_charger_action_book">Reserve</string>
+    <string name="energo_charger_action_charge">Charging</string>
+    <string name="energo_charger_status_available">Available</string>
+    <string name="energo_charger_status_booked">Booked</string>
+    <string name="energo_charger_status_charging">12.24 KWh @ 132.19 BAHT</string>
+    <string name="energo_charger_recharge_now">Recharge Now</string>
+    <string name="energo_charger_recharge_stop">Finish Recharge</string>
+
 </resources>

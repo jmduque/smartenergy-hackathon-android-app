@@ -7,6 +7,7 @@
     tools:context="com.energolabs.evergo.modules.main.activities.MainActivity">
 
     <ImageView
+        android:id="@+id/iv_map"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
@@ -63,5 +64,82 @@
         android:elevation="16dp"
         android:foreground="?selectableItemBackground"
         android:src="@drawable/ic_zoom_in" />
+
+    <ImageView
+        android:id="@+id/iv_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingEnd="18dp"
+        android:paddingTop="32dp"
+        android:src="@drawable/ic_open" />
+
+    <FrameLayout
+        android:id="@+id/fl_charger_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/energo_medium_spacing"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_charger_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@android:color/white"
+            android:foreground="?selectableItemBackground"
+            android:padding="@dimen/energo_medium_spacing">
+
+            <TextView
+                android:id="@+id/tv_charger_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/energo_small_spacing"
+                android:drawableStart="@drawable/ic_battery_ev"
+                android:text="@string/energo_charger_default_name"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv_charger_power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_charger_name"
+                android:layout_marginTop="32dp"
+                android:text="@string/energo_charger_default_power" />
+
+            <TextView
+                android:id="@+id/tv_charger_voltage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_charger_power"
+                android:text="@string/energo_charger_default_voltage" />
+
+            <TextView
+                android:id="@+id/tv_charger_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/tv_charger_name"
+                android:layout_marginTop="32dp" />
+
+            <TextView
+                android:id="@+id/tv_charger_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/tv_charger_action"
+                android:textColor="#4DD215" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_booking" />
+
+    </FrameLayout>
 
 </RelativeLayout>
