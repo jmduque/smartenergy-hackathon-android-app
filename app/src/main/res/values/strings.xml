@@ -8,6 +8,7 @@
     <string name="energo_check_read_external_storage_permissions">Check application permissions to Read External Storage</string>
     <string name="energo_check_write_external_storage_permissions">Check application permissions to Write External Storage</string>
     <string name="energo_see_all">See All</string>
+    <string name="energo_undefined_name">Undefined</string>
 
     <!-- Common Market Defaults -->
     <string name="energo_default_energy_balance" translatable="false">0.00</string>
@@ -23,6 +24,10 @@
     <string name="energo_content_description_background" translatable="false">Background</string>
 
     <!-- Main Screen -->
+    <string name="energo_main_menu_map">Map</string>
+    <string name="energo_main_menu_storage">Storage</string>
+    <string name="energo_main_menu_wallet">Wallet</string>
+    <string name="energo_main_menu_settings">Settings</string>
     <string name="energo_main_energy_balance">Energy Balance</string>
     <string name="energo_main_energy_best_price">Best Price</string>
     <string name="energo_main_creation">Creation</string>
@@ -94,7 +99,7 @@
     <string name="energo_wallet_title">Wallet</string>
     <string name="energo_wallet_date">Date</string>
     <string name="energo_wallet_currency_header">Balance</string>
-    <string name="energo_wallet_currency_symbol">PHP</string>
+    <string name="energo_wallet_currency_symbol">BAHT</string>
     <string name="energo_wallet_currency_recharge">Recharge</string>
     <string name="energo_wallet_currency_withdraw">Withdraw</string>
     <string name="energo_wallet_transaction_value_format" translatable="false">%1$s%2$.2f %3$s</string>

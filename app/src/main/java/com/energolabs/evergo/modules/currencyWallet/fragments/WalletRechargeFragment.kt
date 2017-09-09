@@ -24,9 +24,6 @@ class WalletRechargeFragment : BaseFragment(),
         View.OnClickListener,
         WalletExchangeController.ResultListener {
 
-    // ARGUMENTS DATA
-    private var currencySymbol: String? = null
-
     // VIEWS
     private var iv_alipay: View? = null
     private var iv_paypal: View? = null
@@ -42,7 +39,6 @@ class WalletRechargeFragment : BaseFragment(),
 
     override fun onCreate(savedInstanceState: Bundle?) {
         val args = arguments
-        currencySymbol = args?.getString(CURRENCY_SYMBOL)
         super.onCreate(savedInstanceState)
         walletExchangeController = WalletExchangeController(
                 context,
@@ -60,8 +56,6 @@ class WalletRechargeFragment : BaseFragment(),
         iv_alipay?.isSelected = true
         iv_paypal = view.findViewById(R.id.iv_paypal)
 
-        val tv_currency_symbol = view.findViewById(R.id.tv_currency_symbol) as TextView
-        tv_currency_symbol.text = currencySymbol
         et_currency_amount = view.findViewById(R.id.et_currency_amount) as TextView
 
         btn_recharge = view.findViewById(R.id.btn_recharge)
@@ -115,7 +109,7 @@ class WalletRechargeFragment : BaseFragment(),
                 )
                 walletExchangeController
                         ?.setType(WalletExchangeController.TYPE_TOPUP)
-                        ?.setCurrencySymbol(currencySymbol)
+                        ?.setCurrencySymbol("BAHT")
                         ?.setAmount(
                                 CurrencyController.getRawValue(amount)
                         )

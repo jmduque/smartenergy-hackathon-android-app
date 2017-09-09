@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
@@ -9,278 +8,60 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:src="@drawable/bg_gradient" />
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_map" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/iv_avatar"
-        android:layout_width="@dimen/energo_avatar_small"
-        android:layout_height="@dimen/energo_avatar_small"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="@dimen/energo_large_spacing"
-        android:layout_marginTop="@dimen/energo_large_spacing"
-        android:contentDescription="@string/energo_content_description_avatar"
-        android:src="@android:color/darker_gray"
-        app:civ_border_color="@android:color/white"
-        app:civ_border_width="1dp" />
-
-    <ImageView
-        android:id="@+id/iv_settings"
+        android:id="@+id/iv_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="4dp"
-        android:layout_marginTop="38dp"
-        android:contentDescription="@string/energo_content_description_icon"
-        android:padding="@dimen/energo_small_spacing"
-        android:src="@drawable/icx_settings" />
+        android:elevation="16dp"
+        android:foreground="?selectableItemBackground"
+        android:padding="@dimen/energo_large_spacing"
+        android:src="@drawable/ic_menu" />
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_scanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="270dp"
-        android:background="@drawable/bg_main_activity_footer">
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/energo_large_spacing"
+        android:elevation="16dp"
+        android:foreground="?selectableItemBackground"
+        android:src="@drawable/ic_scanner" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="12dp"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/tv_usage"
-                    style="@style/energo_main_action"
-                    android:drawableTop="@drawable/ic_main_house_charts"
-                    android:text="@string/energo_main_usage" />
-
-                <TextView
-                    android:id="@+id/tv_market"
-                    style="@style/energo_main_action"
-                    android:drawableTop="@drawable/ic_main_market"
-                    android:text="@string/energo_main_market" />
-
-                <TextView
-                    android:id="@+id/tv_bill"
-                    style="@style/energo_main_action"
-                    android:drawableTop="@drawable/ic_main_bill"
-                    android:text="@string/energo_main_bill" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/energo_large_spacing">
-
-                <TextView
-                    android:id="@+id/tv_ledger"
-                    style="@style/energo_main_action"
-                    android:drawableTop="@drawable/ic_main_ledger"
-                    android:text="@string/energo_main_ledger" />
-
-                <TextView
-                    android:id="@+id/tv_devices"
-                    style="@style/energo_main_action"
-                    android:drawableTop="@drawable/ic_main_device"
-                    android:text="@string/energo_main_devices" />
-
-                <TextView
-                    android:id="@+id/tv_market_agent"
-                    style="@style/energo_main_action"
-                    android:drawableTop="@drawable/ic_main_creation"
-                    android:enabled="false"
-                    android:text="@string/energo_main_market_agent"
-                    android:visibility="invisible" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </FrameLayout>
-
-    <RelativeLayout
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_my_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/iv_settings"
-        android:layout_centerHorizontal="true">
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/energo_large_spacing"
+        android:elevation="16dp"
+        android:foreground="?selectableItemBackground"
+        android:src="@drawable/ic_my_location" />
 
-        <com.dinuscxj.progressbar.CircleProgressBar
-            android:id="@+id/cpb_order_progress"
-            android:layout_width="186dp"
-            android:layout_height="186dp"
-            android:layout_marginStart="@dimen/energo_small_spacing"
-            app:background_color="@color/transparent"
-            app:draw_progress_text="true"
-            app:line_count="80"
-            app:line_width="12dp"
-            app:progress_background_color="@color/white"
-            app:progress_end_color="#FFFC4B"
-            app:progress_shader="linear"
-            app:progress_start_color="#FFFC4B"
-            app:progress_stroke_cap="round"
-            app:progress_stroke_width="1dp"
-            app:progress_text_color="@color/transparent"
-            app:progress_text_size="@dimen/energo_text_double_large"
-            app:style="line"
-            tools:max="30"
-            tools:progress="17" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_zoom_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/iv_my_location"
+        android:layout_marginBottom="@dimen/energo_medium_spacing"
+        android:layout_marginStart="@dimen/energo_large_spacing"
+        android:elevation="16dp"
+        android:foreground="?selectableItemBackground"
+        android:src="@drawable/ic_zoom_out" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignBottom="@id/cpb_order_progress"
-            android:layout_alignEnd="@id/cpb_order_progress"
-            android:layout_alignStart="@id/cpb_order_progress"
-            android:layout_alignTop="@id/cpb_order_progress">
-
-            <TextView
-                android:id="@+id/tv_order_progress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:textColor="@color/white"
-                android:textSize="@dimen/energo_text_quad_tiny"
-                android:textStyle="bold"
-                tools:text="45%" />
-
-            <TextView
-                android:id="@+id/tv_order_total_energy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_order_progress"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="-8dp"
-                android:alpha="0.57"
-                android:textColor="@color/white"
-                android:textSize="@dimen/energo_text_small"
-                android:textStyle="bold"
-                tools:text="3655.21" />
-
-            <TextView
-                android:id="@+id/tv_order_transaction_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_order_total_energy"
-                android:layout_centerHorizontal="true"
-                android:textColor="@color/white"
-                android:textSize="@dimen/energo_text_tiny"
-                tools:text="1.2 PHP" />
-
-            <TextView
-                android:id="@+id/tv_order_type"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@id/tv_order_progress"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="@dimen/energo_very_small_spacing"
-                android:background="@drawable/bg_main_order_buy_type"
-                android:gravity="center"
-                android:minWidth="48dp"
-                android:padding="@dimen/energo_super_small_spacing"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:textSize="@dimen/energo_text_tiny"
-                android:textStyle="bold"
-                android:visibility="gone"
-                tools:text="@string/energo_main_order_type_buy" />
-
-        </RelativeLayout>
-
-        <ImageView
-            android:id="@+id/iv_energy_price_arrow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/energo_small_spacing"
-            android:layout_marginStart="@dimen/energo_small_spacing"
-            android:layout_marginTop="24dp"
-            android:layout_toEndOf="@id/cpb_order_progress"
-            android:contentDescription="@string/energo_content_description_icon"
-            android:src="@drawable/ic_main_arrow_price" />
-
-        <TextView
-            android:id="@+id/tv_energy_price_subtitle"
-            style="@style/energo_main_floating_info_subtitle"
-            android:layout_alignEnd="@id/iv_energy_price_arrow"
-            android:layout_below="@id/iv_energy_price_arrow"
-            android:layout_marginEnd="@dimen/energo_small_spacing"
-            android:drawableStart="@drawable/ic_rounded_dollar"
-            android:text="@string/energo_main_energy_best_price" />
-
-        <TextView
-            android:id="@+id/tv_energy_price"
-            style="@style/energo_main_floating_info"
-            android:layout_alignBottom="@id/iv_energy_price_arrow"
-            android:layout_alignEnd="@id/tv_energy_price_subtitle"
-            android:layout_marginBottom="@dimen/energo_medium_spacing"
-            android:text="@string/energo_default_energy_price_balance"
-            tools:text="0.617" />
-
-        <ImageView
-            android:id="@+id/iv_energy_usage_arrow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/iv_energy_price_arrow"
-            android:layout_marginEnd="@dimen/energo_small_spacing"
-            android:layout_marginStart="@dimen/energo_small_spacing"
-            android:layout_marginTop="38dp"
-            android:layout_toEndOf="@id/cpb_order_progress"
-            android:contentDescription="@string/energo_content_description_icon"
-            android:src="@drawable/ic_main_arrow_price" />
-
-        <TextView
-            android:id="@+id/tv_energy_usage_subtitle"
-            style="@style/energo_main_floating_info_subtitle"
-            android:layout_alignEnd="@id/iv_energy_usage_arrow"
-            android:layout_below="@id/iv_energy_usage_arrow"
-            android:layout_marginEnd="@dimen/energo_small_spacing"
-            android:drawableStart="@drawable/ic_rounded_energy"
-            android:text="@string/energo_main_usage" />
-
-        <TextView
-            android:id="@+id/tv_energy_usage"
-            style="@style/energo_main_floating_info"
-            android:layout_alignBottom="@id/iv_energy_usage_arrow"
-            android:layout_alignEnd="@id/tv_energy_usage_subtitle"
-            android:layout_marginBottom="@dimen/energo_medium_spacing"
-            android:text="@string/energo_default_energy_balance"
-            tools:text="4657.3" />
-
-        <ImageView
-            android:id="@+id/iv_energy_creation_arrow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/iv_energy_usage_arrow"
-            android:layout_marginEnd="@dimen/energo_small_spacing"
-            android:layout_marginStart="@dimen/energo_small_spacing"
-            android:layout_marginTop="38dp"
-            android:layout_toEndOf="@id/cpb_order_progress"
-            android:contentDescription="@string/energo_content_description_icon"
-            android:src="@drawable/ic_main_arrow_price" />
-
-        <TextView
-            android:id="@+id/tv_energy_creation_subtitle"
-            style="@style/energo_main_floating_info_subtitle"
-            android:layout_alignEnd="@id/iv_energy_creation_arrow"
-            android:layout_below="@id/iv_energy_creation_arrow"
-            android:layout_marginEnd="@dimen/energo_small_spacing"
-            android:drawableStart="@drawable/ic_rounded_energy"
-            android:text="@string/energo_main_creation" />
-
-        <TextView
-            android:id="@+id/tv_energy_creation"
-            style="@style/energo_main_floating_info"
-            android:layout_alignBottom="@id/iv_energy_creation_arrow"
-            android:layout_alignEnd="@id/tv_energy_creation_subtitle"
-            android:layout_marginBottom="@dimen/energo_medium_spacing"
-            android:text="@string/energo_default_energy_balance"
-            tools:text="0.00" />
-
-    </RelativeLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_zoom_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/iv_zoom_out"
+        android:layout_marginBottom="@dimen/energo_small_spacing"
+        android:layout_marginStart="@dimen/energo_large_spacing"
+        android:elevation="16dp"
+        android:foreground="?selectableItemBackground"
+        android:src="@drawable/ic_zoom_in" />
 
 </RelativeLayout>

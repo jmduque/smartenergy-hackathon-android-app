@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFEFF4"
+    android:background="#293245"
     android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/ll_payment_type"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#1B2437"
         android:divider="@drawable/transparent_medium_vertical_divider"
         android:padding="@dimen/energo_large_spacing"
         android:showDividers="middle">
@@ -33,7 +33,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/ll_payment_type"
-        android:background="@android:color/white"
+        android:layout_marginTop="@dimen/energo_medium_spacing"
+        android:background="#1B2437"
         android:orientation="horizontal"
         android:paddingBottom="@dimen/energo_large_spacing"
         android:paddingTop="@dimen/energo_large_spacing">
@@ -45,7 +46,7 @@
             android:paddingEnd="@dimen/energo_large_spacing"
             android:paddingStart="@dimen/energo_large_spacing"
             android:text="@string/energo_wallet_withdraw_account_header"
-            android:textColor="?android:textColorPrimary" />
+            android:textColor="?android:textColorPrimaryInverse" />
 
         <EditText
             android:id="@+id/et_account_id"
@@ -56,7 +57,9 @@
             android:hint="@string/energo_wallet_withdraw_account_hint"
             android:inputType="numberDecimal"
             android:paddingEnd="@dimen/energo_large_spacing"
-            android:paddingStart="@dimen/energo_large_spacing" />
+            android:paddingStart="@dimen/energo_large_spacing"
+            android:textColor="?android:textColorPrimaryInverse"
+            android:textColorHint="?android:textColorTertiaryInverse" />
 
     </LinearLayout>
 
@@ -66,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ll_account"
         android:layout_marginTop="@dimen/energo_divider_medium"
-        android:background="@android:color/white"
+        android:background="#1B2437"
         android:orientation="horizontal"
         android:paddingBottom="@dimen/energo_large_spacing"
         android:paddingTop="@dimen/energo_large_spacing">
@@ -82,19 +85,8 @@
                 android:id="@+id/tv_currency_symbol"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="?android:textColorPrimary"
-                tools:text="PHP" />
-
-            <TextView
-                android:id="@+id/tv_fee_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/energo_very_small_spacing"
-                android:layout_marginStart="@dimen/energo_very_small_spacing"
-                android:layout_toEndOf="@id/tv_currency_symbol"
-                android:text="@string/energo_wallet_withdraw_default_fee_description"
-                android:textColor="@android:color/holo_orange_light"
-                android:textSize="10sp" />
+                android:text="@string/energo_wallet_currency_symbol"
+                android:textColor="?android:textColorPrimaryInverse" />
 
         </RelativeLayout>
 
@@ -107,7 +99,9 @@
             android:hint="@string/energo_wallet_withdraw_amount_hint"
             android:inputType="numberDecimal"
             android:paddingEnd="@dimen/energo_large_spacing"
-            android:paddingStart="@dimen/energo_large_spacing" />
+            android:paddingStart="@dimen/energo_large_spacing"
+            android:textColor="?android:textColorPrimaryInverse"
+            android:textColorHint="?android:textColorTertiaryInverse" />
 
     </LinearLayout>
 

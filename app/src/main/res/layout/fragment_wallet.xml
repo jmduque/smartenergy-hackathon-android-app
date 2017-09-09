@@ -3,16 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#293245"
     android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/rl_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_gradient"
-        android:divider="@drawable/gray_horizontal_divider"
-        android:orientation="vertical"
-        android:showDividers="middle">
+        android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/rl_balance_data"
@@ -42,8 +40,9 @@
                 android:paddingStart="@dimen/energo_large_spacing"
                 android:text="@string/energo_default_currency_balance"
                 android:textAppearance="?android:textAppearanceLarge"
-                android:textColor="?android:textColorPrimaryInverse"
+                android:textColor="#35DE76"
                 android:textSize="48sp"
+                android:textStyle="bold"
                 tools:text="6378,2" />
 
             <TextView
@@ -55,21 +54,21 @@
                 android:layout_toEndOf="@id/tv_currency_balance"
                 android:text="@string/energo_wallet_currency_symbol"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="?android:textColorPrimaryInverse" />
+                android:textColor="#35DE76" />
 
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:divider="@drawable/gray_vertical_divider"
-            android:dividerPadding="@dimen/energo_very_large_spacing"
-            android:orientation="horizontal"
+            android:background="#1B2437"
+            android:divider="@drawable/gray_horizontal_divider"
+            android:orientation="vertical"
             android:showDividers="middle">
 
             <FrameLayout
                 android:id="@+id/rl_recharge"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="?selectableItemBackground"
@@ -86,7 +85,7 @@
 
             <FrameLayout
                 android:id="@+id/rl_withdraw"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="?selectableItemBackground"
@@ -104,7 +103,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
-    <include layout="@layout/swipe_refresh_layout_recyclerview" />
 
 </LinearLayout>

@@ -1,19 +1,16 @@
 package com.energolabs.evergo.modules.currencyWallet.fragments
 
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.TextView
 import com.energolabs.evergo.R
-import com.energolabs.evergo.modules.currencyWallet.adapters.WalletTransactionListAdapter
 import com.energolabs.evergo.modules.currencyWallet.controllers.CurrencyController
 import com.energolabs.evergo.modules.currencyWallet.models.CurrencyWalletModel
-import com.energolabs.evergo.modules.currencyWallet.models.WalletTransactionModel
-import com.energolabs.evergo.modules.currencyWallet.requests.WalletTransactionsRequest
 import com.energolabs.evergo.modules.currencyWallet.requests.controllers.WalletBalanceController
-import com.energolabs.evergo.modules.currencyWallet.viewModels.WalletTransactionViewModel
 import com.energolabs.evergo.ui.activities.DetailActivityNoCollapsing
-import com.energolabs.evergo.ui.fragments.BaseListFragment
-import java.util.*
+import com.energolabs.evergo.ui.fragments.BaseFragment
 
 /**
  * Created by Jose Duque on 12/13/16.
@@ -23,11 +20,7 @@ import java.util.*
  * Copy or sale of this class is forbidden.
  */
 
-class WalletFragment : BaseListFragment<
-        WalletTransactionListAdapter,
-        WalletTransactionViewModel,
-        WalletTransactionModel
-        >(),
+class WalletFragment : BaseFragment(),
         View.OnClickListener {
 
     // CURRENCY WALLET DATA & ACTIONS
@@ -60,12 +53,10 @@ class WalletFragment : BaseListFragment<
                 container,
                 savedInstanceState
         )
-        setHasOptionsMenu(true)
         return view
     }
 
     override fun findViews(view: View) {
-        super.findViews(view)
         tv_currency_balance = view.findViewById(R.id.tv_currency_balance) as TextView
         tv_currency_balance_symbol = view.findViewById(R.id.tv_currency_balance_symbol) as TextView
         rl_recharge = view.findViewById(R.id.rl_recharge)
@@ -78,63 +69,10 @@ class WalletFragment : BaseListFragment<
         rl_withdraw?.setOnClickListener(this)
     }
 
-    override fun onCreateOptionsMenu(
-            menu: Menu?,
-            menuInflater: MenuInflater?
-    ) {
-        super.onCreateOptionsMenu(
-                menu,
-                menuInflater
-        )
-        menuInflater?.inflate(
-                R.menu.energo_wallet,
-                menu
-        )
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when (item?.itemId) {
-            R.id.menu_date -> {
-                // TODO
-                return true
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
     override fun onResume() {
         super.onResume()
         walletBalanceController?.makeRequest()
-        requestData()
         setTitle(R.string.energo_wallet_title)
-    }
-
-    override fun makeAdapter(): WalletTransactionListAdapter {
-        return WalletTransactionListAdapter(
-                ArrayList<WalletTransactionViewModel>()
-        )
-    }
-
-    override fun requestData() {
-        WalletTransactionsRequest.Builder(context ?: return)
-                .setResultListener(this)
-                .setTag(BaseListFragment.GET_ITEMS)
-                .request()
-    }
-
-    override fun loadMoreData() {
-        WalletTransactionsRequest.Builder(context ?: return)
-                .setOffset(listedItemsCount)
-                .setResultListener(this)
-                .setTag(BaseListFragment.GET_MORE_ITEMS)
-                .request()
-    }
-
-    override fun makeViewModel(item: WalletTransactionModel?): WalletTransactionViewModel {
-        return WalletTransactionViewModel(
-                activity,
-                item
-        )
     }
 
     override fun disableViews() {
@@ -171,7 +109,7 @@ class WalletFragment : BaseListFragment<
                 R.string.energo_currency_format,
                 CurrencyController.getRealValue(currencyWalletModel?.balance ?: 0)
         )
-        tv_currency_balance_symbol?.text = if (currencyWalletModel != null) currencyWalletModel.symbol else ""
+        tv_currency_balance_symbol?.text = getString(R.string.energo_wallet_currency_symbol)
     }
 
     override fun onClick(view: View) {

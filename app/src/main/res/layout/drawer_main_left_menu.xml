@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/energo_avatar_large"
+        android:layout_height="@dimen/energo_avatar_large"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/energo_avatar_medium"
+        android:src="@drawable/ic_default_avatar_boy" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/energo_small_spacing"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/energo_text_medium"
+        tools:text="Jose Duque" />
+
+    <TextView
+        android:id="@+id/tv_map"
+        style="@style/energo_main_left_menu_item"
+        android:layout_marginTop="@dimen/energo_very_large_spacing"
+        android:drawableStart="@drawable/ic_menu_map"
+        android:text="@string/energo_main_menu_map" />
+
+    <TextView
+        android:id="@+id/tv_storage"
+        style="@style/energo_main_left_menu_item"
+        android:drawableStart="@drawable/ic_menu_storage"
+        android:text="@string/energo_main_menu_storage" />
+
+    <TextView
+        android:id="@+id/tv_wallet"
+        style="@style/energo_main_left_menu_item"
+        android:drawableStart="@drawable/ic_menu_wallet"
+        android:text="@string/energo_main_menu_wallet" />
+
+    <TextView
+        android:id="@+id/tv_settings"
+        style="@style/energo_main_left_menu_item"
+        android:drawableStart="@drawable/ic_menu_settings"
+        android:text="@string/energo_main_menu_settings" />
+
+</LinearLayout>

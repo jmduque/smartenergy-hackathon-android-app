@@ -26,9 +26,6 @@ class WalletWithdrawFragment : BaseFragment(),
         View.OnClickListener,
         WalletExchangeController.ResultListener {
 
-    // ARGUMENTS DATA
-    private var currencySymbol: String? = null
-
     // VIEWS
     private var iv_alipay: View? = null
     private var iv_paypal: View? = null
@@ -43,8 +40,6 @@ class WalletWithdrawFragment : BaseFragment(),
         get() = R.layout.fragment_wallet_withdraw
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val args = arguments
-        currencySymbol = args?.getString(CURRENCY_SYMBOL)
         super.onCreate(savedInstanceState)
         walletExchangeController = WalletExchangeController(
                 context,
@@ -62,8 +57,6 @@ class WalletWithdrawFragment : BaseFragment(),
         iv_alipay?.isSelected = true
         iv_paypal = view.findViewById(R.id.iv_paypal)
 
-        val tv_currency_symbol = view.findViewById(R.id.tv_currency_symbol) as TextView
-        tv_currency_symbol.text = currencySymbol
         et_currency_amount = view.findViewById(R.id.et_currency_amount) as TextView
 
         btn_withdraw = view.findViewById(R.id.btn_withdraw)
@@ -111,7 +104,7 @@ class WalletWithdrawFragment : BaseFragment(),
                                         walletExchangeController
                                                 ?.setPaymentPassword(paymentPassword)
                                                 ?.setType(WalletExchangeController.TYPE_WITHDRAW)
-                                                ?.setCurrencySymbol(currencySymbol)
+                                                ?.setCurrencySymbol("BAHT")
                                                 ?.setAmount(
                                                         CurrencyController.getRawValue(
                                                                 java.lang.Double.valueOf(et_currency_amount?.text?.toString())

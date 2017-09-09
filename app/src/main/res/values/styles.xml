@@ -30,7 +30,7 @@
 
     <style name="energo_primary_filled_button" parent="energo_button">
         <item name="android:background">@drawable/bg_primary_filled_button</item>
-        <item name="android:textColor">@android:color/primary_text_dark</item>
+        <item name="android:textColor">#293245</item>
     </style>
 
     <style name="energo_primary_red_filled_button" parent="energo_button">
@@ -158,10 +158,12 @@
         <item name="android:textColor">?android:textColorPrimaryInverse</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:gravity">center</item>
-        <item name="android:drawablePadding">@dimen/energo_small_spacing</item>
+        <item name="android:layout_gravity">center_vertical|start</item>
+        <item name="android:gravity">center_vertical|start</item>
+        <item name="android:layout_marginStart">@dimen/energo_medium_spacing</item>
+        <item name="android:drawablePadding">@dimen/energo_medium_spacing</item>
         <item name="android:padding">@dimen/energo_large_spacing</item>
+        <item name="android:textSize">@dimen/energo_text_medium</item>
     </style>
 
     <style name="energo_wallet_payment_type">
@@ -806,6 +808,19 @@
         <item name="android:textColor">?android:textColorPrimaryInverse</item>
         <item name="android:textSize">@dimen/energo_text_small</item>
         <item name="android:textColorHint">?android:textColorTertiaryInverse</item>
+    </style>
+
+    <style name="energo_main_left_menu_item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/energo_medium_spacing</item>
+        <item name="android:drawablePadding">@dimen/energo_small_spacing</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:layout_marginStart">48dp</item>
+        <item name="android:padding">@dimen/energo_small_spacing</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:textSize">@dimen/energo_text_medium</item>
     </style>
 
 </resources>
