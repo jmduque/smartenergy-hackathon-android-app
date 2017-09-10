@@ -63,6 +63,11 @@ class CountrySelectorFragment : BaseListFragment<
     }
 
     override fun requestData() {
+        val thailandModel = CountryModel()
+        thailandModel.name = "Thailand"
+        thailandModel.phoneCode = "+66"
+        countryModelList.add(thailandModel)
+
         val philippinesModel = CountryModel()
         philippinesModel.name = "Philippines"
         philippinesModel.phoneCode = "+63"

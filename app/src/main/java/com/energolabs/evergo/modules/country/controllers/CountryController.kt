@@ -18,6 +18,7 @@ object CountryController {
         when (phoneCode) {
             "+86" -> return R.drawable.ic_china
             "+886" -> return R.drawable.ic_taiwan
+            "+66" -> return R.drawable.ic_thailand
             "+63" -> return R.drawable.ic_philippines
             "+1" -> return R.drawable.ic_usa
             else -> return R.drawable.ic_china
@@ -26,8 +27,8 @@ object CountryController {
 
     fun makeDefaultCountry() : CountryModel {
         val countryModel = CountryModel()
-        countryModel.name = "Philippines"
-        countryModel.phoneCode = "+63"
+        countryModel.name = "Thailand"
+        countryModel.phoneCode = "+66"
         return countryModel
     }
 

@@ -19,6 +19,7 @@ import com.energolabs.evergo.modules.chargers.fragments.ChargerStopFragment
 import com.energolabs.evergo.modules.chargers.storage.ChargerPreferences
 import com.energolabs.evergo.modules.currencyWallet.fragments.WalletFragment
 import com.energolabs.evergo.modules.settings.fragments.SettingsFragment
+import com.energolabs.evergo.modules.transactions.fragments.TransactionListFragment
 import com.energolabs.evergo.modules.user.profile.models.UserModel
 import com.energolabs.evergo.modules.user.profile.requests.GetUserRequest
 import com.energolabs.evergo.modules.user.profile.requests.PutUserRequest
@@ -50,6 +51,7 @@ class MainActivity : BaseActivity(),
     // SECTIONS ACCESSES
     private var tv_map: View? = null
     private var tv_wallet: View? = null
+    private var tv_transactions: View? = null
     private var tv_storage: View? = null
 
     // MAIN CONTENT ITEMS
@@ -112,6 +114,7 @@ class MainActivity : BaseActivity(),
 
         tv_map = findViewById(R.id.tv_map)
         tv_wallet = findViewById(R.id.tv_wallet)
+        tv_transactions = findViewById(R.id.tv_transactions)
         tv_storage = findViewById(R.id.tv_storage)
     }
 
@@ -131,6 +134,7 @@ class MainActivity : BaseActivity(),
 
         tv_map?.setOnClickListener(this)
         tv_wallet?.setOnClickListener(this)
+        tv_transactions?.setOnClickListener(this)
         tv_storage?.setOnClickListener(this)
 
         iv_map?.setOnClickListener(this)
@@ -246,6 +250,15 @@ class MainActivity : BaseActivity(),
                 drawer_layout?.closeDrawers()
             }
             R.id.tv_map -> {
+                drawer_layout?.closeDrawers()
+            }
+            R.id.tv_transactions -> {
+                DetailActivityNoCollapsing.openWithFragment(
+                        this,
+                        TransactionListFragment::class.java.name,
+                        TransactionListFragment.makeArguments(),
+                        true
+                )
                 drawer_layout?.closeDrawers()
             }
             R.id.tv_wallet -> {

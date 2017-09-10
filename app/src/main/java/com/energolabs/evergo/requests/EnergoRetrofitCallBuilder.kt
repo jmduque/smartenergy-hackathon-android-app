@@ -79,7 +79,7 @@ class EnergoRetrofitCallBuilder private constructor(context: Context) {
 
     private fun baseUrl() {
         retrofitBuilder.baseUrl(
-                "http://ec2-54-169-214-62.ap-southeast-1.compute.amazonaws.com:3001/api/v1/"
+                "http://evergo.energolabs.com:3001/api/v1/"
         )
     }
 

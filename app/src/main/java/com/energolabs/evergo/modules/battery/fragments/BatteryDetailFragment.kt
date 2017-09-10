@@ -82,7 +82,7 @@ class BatteryDetailFragment : BaseFragment() {
     private fun updateCharge(
             charge: Double
     ) {
-        et_capacity?.text = getString(
+        et_charge?.text = getString(
                 R.string.energo_energy_format,
                 charge
         )

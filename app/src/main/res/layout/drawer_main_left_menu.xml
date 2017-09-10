@@ -43,6 +43,12 @@
         android:text="@string/energo_main_menu_wallet" />
 
     <TextView
+        android:id="@+id/tv_transactions"
+        style="@style/energo_main_left_menu_item"
+        android:drawableStart="@drawable/ic_transactions"
+        android:text="@string/energo_main_menu_transactions" />
+
+    <TextView
         android:id="@+id/tv_settings"
         style="@style/energo_main_left_menu_item"
         android:drawableStart="@drawable/ic_menu_settings"

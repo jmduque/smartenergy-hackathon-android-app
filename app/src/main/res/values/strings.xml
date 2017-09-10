@@ -27,6 +27,7 @@
     <string name="energo_main_menu_map">Map</string>
     <string name="energo_main_menu_storage">Storage</string>
     <string name="energo_main_menu_wallet">Wallet</string>
+    <string name="energo_main_menu_transactions">Transactions</string>
     <string name="energo_main_menu_settings">Settings</string>
     <string name="energo_main_energy_balance">Energy Balance</string>
     <string name="energo_main_energy_best_price">Best Price</string>
@@ -420,6 +421,9 @@
     <string name="energo_charger_status_booked">Booked</string>
     <string name="energo_charger_status_charging">12.24 KWh @ 132.19 BAHT</string>
     <string name="energo_charger_recharge_now">Recharge Now</string>
-    <string name="energo_charger_recharge_stop">Finish Recharge</string>
+    <string name="energo_charger_recharge_stop">Stop Recharge</string>
+
+    <!-- Transactions -->
+    <string name="energo_transactions_list_title">Transactions</string>
 
 </resources>
