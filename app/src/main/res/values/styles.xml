@@ -25,7 +25,7 @@
 
     <style name="energo_primary_button" parent="energo_button">
         <item name="android:background">@drawable/bg_primary_button</item>
-        <item name="android:textColor">@android:color/primary_text_dark</item>
+        <item name="android:textColor">@android:color/primary_text_light</item>
     </style>
 
     <style name="energo_primary_filled_button" parent="energo_button">
@@ -50,12 +50,12 @@
 
     <style name="energo_primary_green_button" parent="energo_button">
         <item name="android:background">@drawable/bg_primary_green_button</item>
-        <item name="android:textColor">@color/primary_green_button_text_color</item>
+        <item name="android:textColor">#35DF76</item>
     </style>
 
     <style name="energo_secondary_button" parent="energo_button">
         <item name="android:background">@drawable/bg_secondary_button</item>
-        <item name="android:textColor">@android:color/primary_text_dark</item>
+        <item name="android:textColor">#35DF76</item>
     </style>
 
     <style name="energo_logo_login">
@@ -324,7 +324,7 @@
         <item name="android:layout_marginTop">@dimen/energo_double_large_spacing</item>
         <item name="android:padding">@dimen/energo_very_small_spacing</item>
         <item name="android:textAppearance">?android:textAppearanceLarge</item>
-        <item name="android:textColor">@color/energo_text_color_primary</item>
+        <item name="android:textColor">@android:color/primary_text_dark</item>
     </style>
 
     <style name="energo_default_action_result_icon">
